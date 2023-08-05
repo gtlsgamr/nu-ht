@@ -1,0 +1,39 @@
+---
+import data from "../../data.js";
+import { Icon } from 'astro-icon'
+import crest from '../assets/crest.png';
+import { Image } from 'astro:assets';
+---
+
+<!-- - Serif title
+    - sans subtitle/something
+
+- line above title with nav-menu maybe, and a nice archaic logo -->
+<div class="flex flex-col justify-center text-center">
+  <span class="md:text-7xl text-5xl site-title md:block hidden"><a href="/"><Image class="inline" alt="crest" width=100 src={crest}/>{data.siteTitle}</a></span>
+  <span class="md:text-7xl text-5xl site-title md:hidden block"><a href="/">{data.siteMobileTitle}<Image class="inline" alt="crest" width=60 src={crest}/></a></span>
+  <div class="sticky top-0 z-50">
+  <nav class=" border-gray-900 border-t border-b flex justify-center p-1 space-x-4 px-6 md:flex">
+    <ul class="not-prose list-none flex space-x-4 font-bold font-sans md:text-xl">
+        <li><a href="/posts">Blog</a></li>
+        <li><a href="/artwork">Artwork</a></li>
+        <li><a href="/poems">Poetry</a></li>
+        <li><a href="/mahabharat">Reviews</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+    <div class="space-x-4"></div>
+    <div class="ml-auto flex-row flex">
+        <Icon class="w-6" name="mdi:rss"/>
+    </div>
+</nav></div>
+</div>
+
+<style>
+      *{
+        font-family: 'Droid Serif', serif;
+    }
+  .site-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+  }
+</style>
