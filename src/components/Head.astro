@@ -5,8 +5,21 @@ const { title } = Astro.props;
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Add viewport for responsive design -->
   <meta name="generator" content={Astro.generator} />
-  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- SEO stuff -->
+  <meta name="description" content="Hitarth Thummar's Personal website and blog" /> <!-- Add a concise description of your website -->
+  <meta name="keywords" content="blog, personal, indie, smallweb, india, indian" /> <!-- Add relevant keywords related to your website's content -->
+  <meta name="author" content="Hitarth Thummar" /> <!-- Add the author's name -->
+  <meta name="robots" content="index, follow" /> <!-- Specify how search engines should crawl your site -->
+
+  <!-- Social media sharing links -->
+  <meta property="og:title" content='ht.xyz' /> <!-- Open Graph title for Facebook and other social media platforms -->
+  <meta property="og:description" content="Hitarth Thummar's Personal website and blog" /> <!-- Open Graph description for Facebook -->
+  <meta property="og:image" content="/og.webp" /> <!-- Open Graph image for sharing on social media -->
+  <meta property="og:url" content="https://hitarththummar.xyz" /> <!-- Open Graph URL of the webpage -->
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <title>{title} - ht.xyz</title>
 </head>
