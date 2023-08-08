@@ -11,7 +11,8 @@ module.exports = {
 			DEFAULT:{
 				css:{
 					img:{
-						"filter": "sepia(0)"
+						"filter": "sepia(0)",
+						"margin": "auto"
 					},
 					"img:hover":{
 						"filter": "sepia(1)"
