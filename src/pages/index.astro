@@ -73,7 +73,7 @@ const recentPosts = allPosts
         recentPosts.map((post) => (
           <div class="md:text-lg my-4">
             {" "}
-            <a class="recents" href={"/posts/" + post.slug}>
+            <a class="recents" href={post.collection + "/" + post.slug}>
               {" "}
               {post.data.title}
             </a>{" "}
