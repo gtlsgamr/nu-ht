@@ -1,5 +1,5 @@
 ---
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <head>
@@ -15,8 +15,8 @@ const { title } = Astro.props;
   <meta name="robots" content="index, follow" /> <!-- Specify how search engines should crawl your site -->
 
   <!-- Social media sharing links -->
-  <meta property="og:title" content='ht.xyz' /> <!-- Open Graph title for Facebook and other social media platforms -->
-  <meta property="og:description" content="Hitarth Thummar's Personal website and blog" /> <!-- Open Graph description for Facebook -->
+  <meta property="og:title" content={title}/> <!-- Open Graph title for Facebook and other social media platforms -->
+  <meta property="og:description" content={description} /> <!-- Open Graph description for Facebook -->
   <meta property="og:image" content="/og.webp" /> <!-- Open Graph image for sharing on social media -->
   <meta property="og:url" content="https://hitarththummar.xyz" /> <!-- Open Graph URL of the webpage -->
   <!-- Preconnect to fonts.googleapis.com -->
