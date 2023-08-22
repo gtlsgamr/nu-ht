@@ -29,7 +29,7 @@ Enjoy.
 | 11    | SU10                            | Create multiple users                                                                |
 | 12    | PFCG                            | Create role & profiles                                                               |
 | 13    | SE16                            | To view any table                                                                    |
-| 14    | USE02                           | Table of users                                                                       |
+| 14    | USR02                           | Table of users                                                                       |
 | 15    | SUIM                            | Security purpose, User information system.                                           |
 | 16    | SE11                            | Maintaining metadata, data dictionary                                                |
 | 17    | SU21                            | All authorisation object in SAP                                                      |
