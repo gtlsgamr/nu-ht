@@ -37,7 +37,7 @@ Enjoy.
 | 19    | SU53                            | You are assigned to some authorisation or not / missing authorisation                |
 | 20    | SE93                            | To check which prog is running in bg                                                 |
 | 21    | SE38                            | To execute this program (ABAP Editor)                                                |
-| 22    | SM371, SM39                     | To know active background jobs overview                                              |
+| 22    | SM37, SM39                     | To know active background jobs overview                                              |
 | 23    | SM36                            | Scheduling (define) background process (job)                                         |
 | 24    | SM51                            | Kernel version (list of all application server)                                      |
 | 25    | ST04                            | Analyse database                                                                     |
