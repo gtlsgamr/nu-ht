@@ -27,7 +27,7 @@ Enjoy.
 | 9     | RZ11                            | Dynamic parameter / display profile parameter                                        |
 | 10    | SU01                            | Create a single user                                                                 |
 | 11    | SU10                            | Create multiple users                                                                |
-| 12    | PECG                            | Create role & profiles                                                               |
+| 12    | PFCG                            | Create role & profiles                                                               |
 | 13    | SE16                            | To view any table                                                                    |
 | 14    | USE02                           | Table of users                                                                       |
 | 15    | SUIM                            | Security purpose, User information system.                                           |
