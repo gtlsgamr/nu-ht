@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<BaseBlogPost frontmatter={entry.data} title={entry.data.title}>
+<BaseBlogPost frontmatter={entry.data} title={entry.data.title} description={entry.data.description}>
     <div class="border border-dashed border-gray-500 p-4 my-4 mx-4">
     <header class="mx-auto">
         <h1 class="md:text-5xl title text-3xl article-title mx-auto mb-2">{entry.data.title}</h1>
