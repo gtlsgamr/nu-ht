@@ -18,7 +18,7 @@ side.
 
 #### Discussion
 This is another episode with strong dialogue. This series was very dialogue
-heavy, and I think that is what made it popular. The grand characters very
+heavy, and I think that is what made it popular. The grand characters were 
 carried by their words. Today, to cater to modern audiences the series are
 filled with tons of CGI, filler content that deviates wildly from the main
 story line and an overall butchering of characters. This is my personal
