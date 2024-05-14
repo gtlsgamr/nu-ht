@@ -5,6 +5,7 @@ const {title, description, date} = Astro.props;
 <Base title={title} description={description}>
     <article class="prose mx-auto max-w-none md:w-4/5">
         <slot/>
+        To reply via email, <a href=`mailto:hittarth91@gmail.com?subject=Re:%20${title}`>click here</a>.
     </article>
 </Base>
 
