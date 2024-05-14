@@ -18,7 +18,7 @@ module.exports = {
 						"filter": "sepia(1)"
 					},
 					"color": "#2f2f2f",
-					"background-color": "#f9f7f1",
+					"background-color": "#faf9f7",
 					"word-wrap": "break-word",
 					"word-break": "normal",
 					"font-family": "'Droid Serif', serif",

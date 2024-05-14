@@ -1,27 +1,28 @@
 ---
 import Base from "./Base.astro";
-const { title, description, date } = Astro.props;
+const {title, description, date} = Astro.props;
 ---
 <Base title={title} description={description}>
-<article class="prose mx-auto max-w-none md:w-4/5">
-<slot/>
-To reply via email, <a href=`mailto:hittarth91@gmail.com?subject=Re:%20${title}`>click here</a>.
-</article>
+    <article class="prose mx-auto max-w-none md:w-4/5">
+        <slot/>
+    </article>
 </Base>
 
 <style>
     .article-title {
         font-family: 'Playfair Display', serif;
-      font-weight: 600;
+        font-weight: 600;
     }
-.prose{
-    color: #2f2f2f !important;
-    word-wrap: break-word;
-    word-break: normal;
-    max-width: none !important;
-}
-.prose h1{
-    font-weight: 400;
-    color: #2f2f2f !important;
-}
-  </style>
+
+    .prose {
+        color: #faf9f7 !important;
+        word-wrap: break-word;
+        word-break: normal;
+        max-width: none !important;
+    }
+
+    .prose h1 {
+        font-weight: 400;
+        color: #2f2f2f !important;
+    }
+</style>
