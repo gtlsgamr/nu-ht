@@ -8,9 +8,9 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - ne
 ---
 
 <BaseBlogPost title={pageTitle}>
-  <div class="border border-dashed border-gray-500 p-4 my-4 mx-4">
-  <h1 class=" md:text-5xl title text-3xl article-title mb-10">Poems</h1>
-  <ul class="prose">
+  <div class="border border-dashed bg-[url('/public/background.png')] border-gray-500 p-4 my-4 mx-4">
+  <h1 class="bg-[url('/public/background.png')] md:text-5xl title text-3xl article-title mb-10">Poems</h1>
+  <ul class="prose bg-[url('/public/background.png')]">
     {
       sortedPosts.map((post) => (
         <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="poems"/>
