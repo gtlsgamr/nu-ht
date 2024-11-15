@@ -4,8 +4,8 @@ import { getCollection } from "astro:content";
 const pageTitle = "Personal Website and blog";
 const poemPosts = await getCollection("poems");
 const blogPosts = await getCollection("posts");
-const reviewPosts = await getCollection("mahabharat");
-const allPosts = [...poemPosts, ...blogPosts, ...reviewPosts];
+// const reviewPosts = await getCollection("mahabharat");
+const allPosts = [...poemPosts, ...blogPosts];
 const recentPosts = allPosts
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
