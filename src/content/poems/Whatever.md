@@ -1,7 +1,7 @@
 ---
 title: "Whatever"
 description: ''
-date: "2021-12-08"
+published: 2021-12-08
 ---
 2:27,     
 The time without time.     

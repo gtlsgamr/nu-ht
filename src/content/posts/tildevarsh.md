@@ -1,7 +1,7 @@
 ---
 title: "~tildevarsh"
 description: "The story of our own pubnix"
-date: "2022-08-18"
+published: 2022-08-18
 ---
 So recently, we at [gnulinuxindia](https://gnulinuxindia.org) came up with our
 own pubnix, ~[tildevarsh](https://tildevarsh.in). A *pubnix* is a public access unix system. A single computer that

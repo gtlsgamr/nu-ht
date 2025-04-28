@@ -1,6 +1,6 @@
 ---
 title:  Episode 10 - The prophecy
-date: "2021-12-18"
+published: 2021-12-18
 description: ""
 ---
 #### Recap 

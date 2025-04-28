@@ -1,7 +1,7 @@
 ---
 title: "Mindi kot - the card game"
 description: "A guide on playing mindi kot, the Indian card game."
-date: "2023-01-07"
+published: 2023-01-07
 ---
 ## Introduction
 Mindi (or Mindi kot) is a card game played between 4 or more people. The number of people has to be even, because they will be playing in subgroups of two. It is a game of part guesswork part mental calculation as you have to keep in mind what cards were played and which cards the other players might be holding. I am writing this guide so that others may also learn of this game and have the same fun that we had back in the day.

@@ -1,6 +1,6 @@
 ---
 title:  Episode 30 - Surang
-date: "2023-01-27"
+published: 2023-01-27
 description: The pandavs and Kunti visit Varnavat. They find out about Shakuni and Duryodhan's conspiracy.
 ---
 #### Surang 

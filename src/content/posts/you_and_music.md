@@ -1,7 +1,7 @@
 ---
 title: "When its just you and the music"
 description: "When its just you and the music, the view is slightly shifted."
-date: "2022-01-06"
+published: 2022-01-06
 ---
 When it's just you and the music, the view is slightly shifted. Reds are pink,
 pinks are orange, blue is bad and lost is black. When it's just you and the

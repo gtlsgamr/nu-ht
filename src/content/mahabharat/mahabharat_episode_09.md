@@ -1,6 +1,6 @@
 ---
 title:  Episode 09 - Dhritrashtra is king
-date: "2021-12-17"
+published: 2021-12-17
 description: ""
 ---
 #### Recap 

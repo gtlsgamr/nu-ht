@@ -1,6 +1,6 @@
 ---
 title:  Episode 20 - How Bheem got his strength
-date: "2021-12-24"
+published: 2021-12-24
 description: ""
 ---
 #### Recap 

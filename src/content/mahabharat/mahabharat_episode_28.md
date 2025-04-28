@@ -1,6 +1,6 @@
 ---
 title:  Episode 28 - Rukmini's Rescue
-date: "2022-04-08"
+published: 2022-04-08
 description: Krishna rescues Rukmini from getting forcefully married.
 ---
 #### Rukmini's rescue

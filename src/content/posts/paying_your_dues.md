@@ -1,7 +1,7 @@
 --- 
 title: "How asking for a traffic challan might benefit you." 
 description: "My experience with a traffic policeman and how it taught me a neat trick"
-date: "2024-07-13" 
+published: 2024-07-13 
 ---
 
 You know those last five seconds of a green light? The ones where the guy in

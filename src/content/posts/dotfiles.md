@@ -1,6 +1,6 @@
 ---
 title: "Managing dotfiles"
-date: "2021-12-23"
+published: 2021-12-23
 description: "Managing dotfiles using a git repository"
 ---
 "Dotfiles" are a way to store configuration of various packages and programs on your system. They are named so because of the '*.*' that precedes their names to keep them hidden. 

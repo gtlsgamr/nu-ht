@@ -1,7 +1,7 @@
 ---
 title: "Music finding service"
 description: "An idea for a crowdsourced music finding service"
-date: "2021-12-19"
+published: 2021-12-19
 ---
 Hi all,
 

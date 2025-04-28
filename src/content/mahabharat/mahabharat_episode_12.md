@@ -1,6 +1,6 @@
 ---
 title:  Episode 12 - PutanaVadh
-date: "2021-12-20"
+published: 2021-12-20
 description: ""
 ---
 #### Recap 

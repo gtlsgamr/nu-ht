@@ -1,7 +1,7 @@
 ---
 title: "Wrote_for_you"
 description: ''
-date: "2021-12-08"
+published: 2021-12-08
 ---
 I wrote for you.     
 Wasted a thousand words,     

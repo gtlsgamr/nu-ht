@@ -1,7 +1,7 @@
 ---
 title: "Cubicles"
 description: "Thoughts on offices."
-date: "2023-08-07"
+published: 2023-08-07
 ---
 On a pillar in front of my cubicle at my office is a poster of a word cloud. It
 has some random words on it - biology, kinds, organ, organism, growth, studies,

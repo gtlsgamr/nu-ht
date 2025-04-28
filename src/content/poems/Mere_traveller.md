@@ -1,7 +1,7 @@
 ---
 title: "Mere_traveller"
 description: ''
-date: "2021-12-08"
+published: 2021-12-08
 ---
 I am but a mere Traveller     
 On a dusty winding road,     

@@ -1,7 +1,7 @@
 ---
 title: "No, I don't want orange sauce and cheese"
 description: "The western food epidemic in Ahmedabad and Gujarat."
-date: "2023-02-11"
+published: 2023-02-11
 ---
 This is a topic that has been on my mind for quite some time now. The western
 food epidemic in Gujarat, especially Ahmedabad. Western food itself is not the

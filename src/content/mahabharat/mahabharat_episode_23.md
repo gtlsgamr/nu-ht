@@ -1,6 +1,6 @@
 ---
 title:  Episode 23 - Guru Dakshina
-date: "2021-12-27"
+published: 2021-12-27
 description: The royal children are nearly done with their education. Everyone prepares for the graduation ceremony.
 ---
 #### Recap 

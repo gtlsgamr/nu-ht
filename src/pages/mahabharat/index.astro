@@ -1,58 +1,46 @@
 ---
-import { getCollection } from "astro:content";
-import BaseBlogPost from "../../layouts/BaseBlogPost.astro";
-import BlogPreview from "../../components/BlogPreview.astro";
-const pageTitle = "Mahabharat Reviews";
-const allPosts = await getCollection("mahabharat");
-const sortedPosts = allPosts.sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-);
----
+import PostList from '@/components/PostList.astro'
+import { defaultLocale, moreLocales } from '@/config'
+import Layout from '@/layouts/Layout.astro'
+import { getPinnedMahabharat, getMahabharatByYear } from '@/utils/content'
 
-<BaseBlogPost title={pageTitle}>
-  <div class="border bg-[url('/public/background.png')] border-dashed border-gray-500 p-4 my-4 mx-4">
-    <h1 class="md:text-5xl title text-3xl article-title mb-10">
-      Mahabharat Reviews (Discontinued)
-    </h1>
-    <p class="md:text-xl">
-      This show is close to my heart as it was being rerun when I was a child
-      and I remember watching it everyday. This series started as an attempt to
-      provide a reading companion with the TV series. It is inspired by Alan
-      Sepinwall's reviews for *The wire*. Of course, both the shows are vastly
-      different, but I hope I will be able to do this justice. This show is
-      about the Indian epic Mahabharat, and it is nearly identical with the
-      source material, with a few hiccups here and there. It is ingrained in the
-      culture of India as the show that everyone watched when they were kids. No
-      matter the generation, at some point in time this show has always aired on
-      TV since 1988. I hope these episode reviews will serve as a faithful
-      reading companion when you watch the show.
-    </p><p>
-      <b
-        >P.S. These reviews only cover the actual show with 94 episodes and not
-        the pre-sequel-prequels that came in the 90s because they were clearly a
-        cashgrab riding on the success of the original.</b
-      >
-      <hr class="border-b border-gray-700" />
-    <ul class="prose bg-[url('/public/background.png')]">
-      {
-        sortedPosts.map((post) => (
-          <BlogPreview
-            title={post.data.title}
-            date={post.data.date}
-            body={post.body}
-            slug={post.slug}
-            type="mahabharat"
-          />
-        ))
-      }
-    </ul>
-  </div>
-</BaseBlogPost>
-
-<style>
-  .title {
-    font-family: "Playfair Display", serif;
-    font-weight: 400 !important;
-    font-style: italic;
+export async function getStaticPaths() {
+  type PathItem = {
+    params: { index: string | undefined }
+    props: { lang: string }
   }
-</style>
+  const paths: PathItem[] = []
+
+  // Default locale
+  paths.push({ params: { index: undefined }, props: { lang: defaultLocale } })
+
+  // Other locales
+  moreLocales.forEach((lang) => {
+    paths.push({ params: { index: `${lang}/` }, props: { lang } })
+  })
+
+  return paths
+}
+
+const { lang } = Astro.props
+
+const pinnedMahabharat = await getPinnedMahabharat(lang)
+const mahabharatByYear   = await getMahabharatByYear(lang)
+---
+<Layout>
+  <!-- Pinned Mahabharat -->
+  {pinnedMahabharat.length > 0 && (
+    <section class="mb-7.5">
+      <div class="uno-decorative-line"></div>
+      <PostList posts={pinnedMahabharat} lang={lang} pinned />
+    </section>
+  )}
+
+  <!-- Regular Mahabharat by Year -->
+  {[...mahabharatByYear.entries()].map(([year, items]) => (
+    <section class="mb-7.5">
+      <div class="uno-decorative-line"></div>
+      <PostList posts={items} lang={lang} />
+    </section>
+  ))}
+</Layout>

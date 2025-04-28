@@ -1,6 +1,6 @@
 ---
 title:  Episode 18 - The Death of Pandu
-date: "2021-12-22"
+published: 2021-12-22
 description: ""
 ---
 #### Recap 

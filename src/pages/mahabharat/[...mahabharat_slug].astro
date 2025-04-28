@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import Comments from '@/components/Comments/index.astro'
+import PostDate from '@/components/PostDate.astro'
+import GoBack from '@/components/Widgets/GoBack.astro'
+import TOC from '@/components/Widgets/TOC.astro'
+import { allLocales, defaultLocale, moreLocales } from '@/config'
+import { getTagPath } from '@/i18n/path'
+import Layout from '@/layouts/Layout.astro'
+import { checkPostSlugDuplication, getPinnedMahabharat, getMahabharatByYear } from '@/utils/content'
+import { generateDescription } from '@/utils/description'
+import { getCollection, render } from 'astro:content'
+
+export async function getStaticPaths() {
+  const items = await getCollection('mahabharat')
+
+  // optional: check duplicates in mahabharat
+  const dupes = await checkPostSlugDuplication(items as any)
+  if (dupes.length) throw new Error(`Duplicate slugs:\n${dupes.join('\n')}`)
+
+  // map slug → supported langs
+  const slugToLangs = Array.from(
+    items.reduce((map, post) => {
+      const slug = post.data.abbrlink || post.id
+      const lang = post.data.lang
+      if (!map.has(slug)) map.set(slug, new Set(lang ? [lang] : allLocales))
+      else if (lang) map.get(slug)!.add(lang)
+      return map
+    }, new Map<string, Set<string>>())
+  ).reduce((obj, [slug, set]) => {
+    obj[slug] = [...set].sort((a,b)=>allLocales.indexOf(a)-allLocales.indexOf(b))
+    return obj
+  }, {} as Record<string,string[]>)
+
+  type PathItem = { params: { mahabharat_slug: string }; props: { item: any; lang: string; supportedLangs: string[] } }
+  const paths: PathItem[] = []
+
+  // default locale
+  items.forEach(post => {
+    if (import.meta.env.DEV || !post.data.draft) {
+      const slug = post.data.abbrlink || post.id
+      if (!post.data.lang || post.data.lang === defaultLocale) {
+        paths.push({ params:{ mahabharat_slug: `${slug}` }, props:{ item:post, lang: defaultLocale, supportedLangs: slugToLangs[slug] } })
+      }
+    }
+  })
+  // other locales
+  moreLocales.forEach(lang =>
+    items.forEach(post => {
+      if ((import.meta.env.DEV||!post.data.draft) && (post.data.lang===lang||!post.data.lang)) {
+        const slug = post.data.abbrlink||post.id
+        paths.push({ params:{ mahabharat_slug:`${lang}/${slug}` }, props:{ item:post, lang, supportedLangs:slugToLangs[slug] } })
+      }
+    })
+  )
+
+  return paths
+}
+
+const { item, lang, supportedLangs } = Astro.props
+const description = generateDescription(item, 'meta')
+const { Content, headings, remarkPluginFrontmatter } = await render(item)
+---
+
+<Layout postTitle={item.data.title} postDescription={description} postSlug={item.id} supportedLangs={supportedLangs}>
+  <article class="heti mb-12.6">
+    <div class="relative">
+      <GoBack />
+      <h1 class="post-title">
+        <span transition:name={`mahabharat-${item.id}-${lang}`} data-disable-transition-on-theme>
+          {item.data.title}
+        </span>
+      </h1>
+    </div>
+
+    <div class="mb-16.3 block c-primary font-time">
+      <PostDate date={item.data.published} updatedDate={item.data.updated} minutes={remarkPluginFrontmatter.minutes} />
+    </div>
+
+    {item.data.toc && <TOC headings={headings} />}
+    <Content />
+  </article>
+
+  {item.data.tags?.length > 0 && (
+    <><div class="uno-decorative-line"></div>
+      <div class="uno-tags-wrapper">
+        {item.data.tags.map((tag: string) => (
+          <a href={getTagPath(tag,lang)} class="uno-tags-style">{tag}</a>
+        ))}
+      </div></>
+  )}
+
+  <Comments />
+</Layout>

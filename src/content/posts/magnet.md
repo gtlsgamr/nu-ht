@@ -1,7 +1,7 @@
 ---
 title: "Magnet"
 description: "A story from my childhood."
-date: "2022-10-20"
+published: 2022-10-20
 ---
 I loved magnets as a kid. The way they pulled and pushed each other was nothing
 short of magic for me. Another thing I loved was toy mobile phones. They were

@@ -1,6 +1,6 @@
 ---
 title:  Episode 08 - Madri
-date: "2021-12-16"
+published: 2021-12-16
 description: ""
 ---
 #### Recap 

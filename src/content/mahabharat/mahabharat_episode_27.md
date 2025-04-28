@@ -1,6 +1,6 @@
 ---
 title:  Episode 27 - Yuvraj Yudhishthir
-date: "2022-03-24"
+published: 2022-03-24
 description: Yudhishthir is crowned as the heir apparent.
 ---
 #### Yuvraj Yudhishthir

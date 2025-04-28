@@ -1,7 +1,7 @@
 ---
 title: "Goodbye Copilot, it was fun while it lasted."
 description: "Why I am not using GitHub Copilot anymore and why I recommend you shouldn't as well."
-date: "2024-05-20"
+published: 2024-05-20
 ---
 
 I have been using GitHub Copilot for the past few months now, and honestly it is pretty fun. It felt like the kind of

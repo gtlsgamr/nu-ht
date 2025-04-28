@@ -1,6 +1,6 @@
 ---
 title:  Episode 33 - Bakasur Vadh
-date: "2023-03-27"
+published: 2023-03-27
 description: Pandavs arrive in Ekchakranagri, and face another demon.
 ---
 #### Bakasur Vadh

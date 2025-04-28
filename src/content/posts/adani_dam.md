@@ -1,7 +1,7 @@
 ---
 title: "Trip to Narmada Canal"
 description: "Photographs from my recent trip to the dam near Adani Shantigram"
-date: "2023-09-10"
+published: 2023-09-10
 ---
 Yesterday, my cousins, me and some friends went to a dam on the Narmada Canal. We watched the sun set and clicked some cool photos. Then we went for pizza and spent the night riding around town. It was a nice day, a core memory.
 

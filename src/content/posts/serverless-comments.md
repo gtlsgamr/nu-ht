@@ -1,7 +1,7 @@
 ---
 title: "Implementing comments on your static website using Netlify"
 description: "Get comments working on your blog using netlify functions."
-date: "2023-04-28"
+published: 2023-04-28
 ---
 
 ## Backstory
