@@ -11,13 +11,11 @@ const {
 
 // Get the language code of Waline
 function getWalineLang(currentPath: string, defaultLocale: string): string {
-  // Extract language code from path
   const pathLang = Object.keys(walineLocaleMap).find(code =>
-    currentPath.startsWith(`/${code}/`),
+      currentPath.startsWith(`/${code}/`),
   )
-  // Return found path language or default language
-  const lang = pathLang || defaultLocale
-  return walineLocaleMap[lang as keyof typeof walineLocaleMap]
+  const lang =  'en'
+  return walineLocaleMap[lang as keyof typeof walineLocaleMap] || walineLocaleMap['en']
 }
 
 // Get Waline language and generate configuration json
@@ -122,6 +120,10 @@ document.addEventListener('astro:page-load', initWaline)
 #waline .wl-gallery::-webkit-scrollbar {
   --at-apply: 'hidden';
 }
+
+#waline .wl-addr{
+    display: none;
+    }
 
 #waline .wl-emoji-popup {
   --at-apply: 'start-0 border-secondary/25';
