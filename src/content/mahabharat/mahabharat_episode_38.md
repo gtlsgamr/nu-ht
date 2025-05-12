@@ -1,6 +1,6 @@
 ---
 title: Episode 38 - Khandavprastha
-published: 2023-08-24
+date: "2023-08-24"
 description: Pandavs get the Khandavprastha region after the kingdom is divided.
 ---
 

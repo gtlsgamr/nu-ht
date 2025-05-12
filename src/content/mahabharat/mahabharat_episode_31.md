@@ -1,6 +1,6 @@
 ---
 title:  Episode 31 - Aag
-published: 2023-01-30
+date: "2023-01-30"
 description: The plan goes down on both sides. The palace is burned and the Pandavs walk away safely without anyone knowing.
 ---
 #### Aag

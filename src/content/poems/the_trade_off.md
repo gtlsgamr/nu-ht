@@ -1,11 +1,11 @@
 ---
 title: "The Trade-off"
 description: ""
-published: 2025-02-19
+date: "2025-02-19"
 ---
 Where is that guy?     
-The measly human, the small [fry](/poems/smallfry),    
-[Driving](/poems/drive) on roads that never ended    
+The measly human, the small [fry](smallfry),    
+[Driving](drive) on roads that never ended    
 While freaking out about his own life.    
 Instead, all I have now    
 Is this happy giant    

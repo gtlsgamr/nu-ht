@@ -1,6 +1,6 @@
 ---
 title: Episode 37 - Hastinapur is Divided.
-published: 2023-08-08
+date: "2023-08-08"
 description: Elders Decide on the Future of Hastinapur.
 ---
 

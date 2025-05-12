@@ -1,55 +1,184 @@
 ---
 import { Image } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
-import Layout from "../layouts/Layout.astro";
-
-// Dynamically import all artwork images from the folder
-const artworkModules = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/artwork/*.webp',
-  { eager: true }
-);
-
-// Convert to array of { path, image } for captions and keys
-const artworkItems = Object.entries(artworkModules).map(
-  ([filePath, module]) => ({
-    filePath,
-    image: module.default,
-  })
-);
+import BaseBlogPost from "../layouts/BaseBlogPost.astro";
+import a00100sPORTRAIT_00100_BURST20190214181655816_COVER1 from "../assets/artwork/00100sPORTRAIT_00100_BURST20190214181655816_COVER1.webp"
+import a3p01 from "../assets/artwork/3p01.webp"
+import a3p02 from "../assets/artwork/3p02.webp"
+import a404_2_col from "../assets/artwork/404_2_col.webp"
+import a404_2 from "../assets/artwork/404_2.webp"
+import a404 from "../assets/artwork/404.webp"
+import a808s_PIXEL3 from "../assets/artwork/808s_PIXEL3.webp"
+import abeysaale from "../assets/artwork/abeysaale.webp"
+import amb from "../assets/artwork/amb.webp"
+import amittr from "../assets/artwork/amittr.webp"
+import angelsndemons from "../assets/artwork/angelsndemons.webp"
+import ARTist from "../assets/artwork/ARTist.webp"
+import ARTPROJEcT from "../assets/artwork/ARTPROJEcT.webp"
+import azadi from "../assets/artwork/azadi.webp"
+import baldisbold from "../assets/artwork/baldisbold.webp"
+import butterfliesinstomach from "../assets/artwork/butterfliesinstomach.webp"
+import Caveman from "../assets/artwork/Caveman.webp"
+import chai from "../assets/artwork/chai.webp"
+import charlie from "../assets/artwork/charlie.webp"
+import climate_change_small from "../assets/artwork/climate_change_small.webp"
+import Corona from "../assets/artwork/Corona.webp"
+import crucifyme from "../assets/artwork/crucifyme.webp"
+import detrasdh from "../assets/artwork/detrasdh.webp"
+import Diwana from "../assets/artwork/Diwana.webp"
+import dogincar from "../assets/artwork/dogincar.webp"
+import dontletmefall from "../assets/artwork/dontletmefall.webp"
+import dosti from "../assets/artwork/dosti.webp"
+import duba from "../assets/artwork/duba.webp"
+import escape from "../assets/artwork/escape.webp"
+import Existloudly from "../assets/artwork/Existloudly.webp"
+import FALL from "../assets/artwork/FALL.webp"
+import fightthepower from "../assets/artwork/fightthepower.webp"
+import firebreathingmonk from "../assets/artwork/firebreathingmonk.webp"
+import Ghostinbulb from "../assets/artwork/Ghostinbulb.webp"
+import himesh from "../assets/artwork/himesh.webp"
+import hittarthsamurai from "../assets/artwork/hittarthsamurai.webp"
+import Horseface from "../assets/artwork/Horseface.webp"
+import HTvsTheworld from "../assets/artwork/HTvsTheworld.webp"
+import I_AM_A_GOD from "../assets/artwork/I_AM_A_GOD.webp"
+import jesse from "../assets/artwork/jesse.webp"
+import KEANU from "../assets/artwork/KEANU.webp"
+import littleaccident from "../assets/artwork/littleaccident.webp"
+import makani from "../assets/artwork/makani.webp"
+import makepeace from "../assets/artwork/makepeace.webp"
+import mandomobile from "../assets/artwork/mandomobile.webp"
+import mando from "../assets/artwork/mando.webp"
+import mask from "../assets/artwork/mask.webp"
+import modi from "../assets/artwork/modi.webp"
+import monsterhands from "../assets/artwork/monsterhands.webp"
+import Music from "../assets/artwork/Music.webp"
+import NEWSPAPER from "../assets/artwork/NEWSPAPER.webp"
+import nightm_1 from "../assets/artwork/nightm_1.webp"
+import nightm_3 from "../assets/artwork/nightm_3.webp"
+import nohelp from "../assets/artwork/nohelp.webp"
+import nostalgia from "../assets/artwork/nostalgia.webp"
+import outrun from "../assets/artwork/outrun.webp"
+import PicsArt_07_21_10 from "../assets/artwork/PicsArt_07_21_10.webp"
+import PIXEL_1 from "../assets/artwork/PIXEL_1.webp"
+import Riverofdarknes from "../assets/artwork/Riverofdarknes.webp"
+import Rockmonster from "../assets/artwork/Rockmonster.webp"
+import sentience from "../assets/artwork/sentience.webp"
+import shaktimaan from "../assets/artwork/shaktimaan.webp"
+import shitpost from "../assets/artwork/shitpost.webp"
+import skull2 from "../assets/artwork/skull2.webp"
+import skull from "../assets/artwork/skull.webp"
+import skul from "../assets/artwork/skul.webp"
+import Sky_rainbow from "../assets/artwork/Sky_rainbow.webp"
+import SMD from "../assets/artwork/SMD.webp"
+import Soul_on_fire from "../assets/artwork/Soul_on_fire.webp"
+import spacetrip from "../assets/artwork/spacetrip.webp"
+import srk from "../assets/artwork/srk.webp"
+import Starry_girl from "../assets/artwork/Starry_girl.webp"
+import stoneocean from "../assets/artwork/stoneocean.webp"
+import Surya1 from "../assets/artwork/Surya1.webp"
+import Surya2 from "../assets/artwork/Surya2.webp"
+import tea from "../assets/artwork/tea.webp"
+import TungstenBulbsSmokingBongs from "../assets/artwork/TungstenBulbsSmokingBongs.webp"
+import Untitled_1_2 from "../assets/artwork/Untitled_1_2.webp"
 
 ---
-<Layout>
-  <section class="prose mx-6 my-8">
-    These pieces are my creations—from on-location photographs in Ahmedabad
-    to vaporwave-inspired digital compositions. I began experimenting in
-    Photoshop during college, and over time developed a style that blends
-    pop-culture iconography with dreamy, retro-futuristic color palettes.
-    Feel free to browse;  may take a moment to load low-res previews.
-  </section>
+<BaseBlogPost title="Artworks">
+    <div class="border border-dashed border-gray-500 p-4 my-4 mx-4">
+This is my Artwork, wait patiently to load. Meanwhile, click here to read more. 
 
-  <div class="mx-4 mb-8">
-    <h2 class="text-xl font-semibold mb-4">Gallery</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {artworkItems.map(({ filePath, image }) => {
-        // Derive a caption from the file path
-        const fileName = filePath.substring(filePath.lastIndexOf('/') + 1);
-        const caption = fileName.replace(/\.webp$/, '').replace(/[-_]/g, ' ');
-
-        return (
-          <figure class="rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={image}
-              alt={caption}
-              quality="low"
-              loading="lazy"
-              class="w-full h-auto"
-            />
-            <figcaption class="p-2 text-center text-sm">{caption}</figcaption>
-          </figure>
-        );
-      })}
-    </div>
-  </div>
+Back in college, I learned photoshop out of curiosity and proceeded to make
+some artwork that I think is pretty good. The themes include photographs taken
+by me during my stay in Ahmedabad and pop culture icons that were influential
+in my upbringing. I relied heavily on vaporwave themes for most of the artwork.
+Many of these pictures are also entirely made from scratch by me.
 
 
-</Layout>
+<div class="md:grid md:grid-cols-3 gap-4">
+<Image src={HTvsTheworld} alt="HTvsTheworld" quality="low" />
+<Image src={a808s_PIXEL3} alt="a808s_PIXEL3" quality="low" />
+<Image src={skul} alt="skul" quality="low" />
+<Image src={nostalgia} alt="nostalgia" quality="low" />
+<Image src={dogincar} alt="dogincar" quality="low" />
+<Image src={himesh} alt="himesh" quality="low" />
+<Image src={Music} alt="Music" quality="low" />
+<Image src={ARTist} alt="ARTist" quality="low" />
+<Image src={Horseface} alt="Horseface" quality="low" />
+<Image src={Surya1} alt="Surya1" quality="low" />
+<Image src={skull2} alt="skull2" quality="low" />
+<Image src={mask} alt="mask" quality="low" />
+<Image src={makepeace} alt="makepeace" quality="low" />
+<Image src={srk} alt="srk" quality="low" />
+<Image src={a3p01} alt="a3p01" quality="low" />
+<Image src={Starry_girl} alt="Starry_girl" quality="low" />
+<Image src={angelsndemons} alt="angelsndemons" quality="low" />
+<Image src={PIXEL_1} alt="PIXEL_1" quality="low" />
+<Image src={a404_2_col} alt="a404_2_col" quality="low" />
+<Image src={Existloudly} alt="Existloudly" quality="low" />
+<Image src={skull} alt="skull" quality="low" />
+<Image src={Corona} alt="Corona" quality="low" />
+<Image src={jesse} alt="jesse" quality="low" />
+<Image src={SMD} alt="SMD" quality="low" />
+<Image src={Surya2} alt="Surya2" quality="low" />
+<Image src={mandomobile} alt="mandomobile" quality="low" />
+<Image src={Soul_on_fire} alt="Soul_on_fire" quality="low" />
+<Image src={monsterhands} alt="monsterhands" quality="low" />
+<Image src={fightthepower} alt="fightthepower" quality="low" />
+<Image src={sentience} alt="sentience" quality="low" />
+<Image src={Ghostinbulb} alt="Ghostinbulb" quality="low" />
+<Image src={littleaccident} alt="littleaccident" quality="low" />
+<Image src={PicsArt_07_21_10} alt="PicsArt_07_21_10.23.41" quality="low" />
+<Image src={ARTPROJEcT} alt="ARTPROJEcT" quality="low" />
+<Image src={dosti} alt="dosti" quality="low" />
+<Image src={azadi} alt="azadi" quality="low" />
+<Image src={NEWSPAPER} alt="NEWSPAPER" quality="low" />
+<Image src={Sky_rainbow} alt="Sky_rainbow" quality="low" />
+<Image src={charlie} alt="charlie" quality="low" />
+<Image src={Riverofdarknes} alt="Riverofdarknes" quality="low" />
+<Image src={a00100sPORTRAIT_00100_BURST20190214181655816_COVER1} alt="a00100sPORTRAIT_00100_BURST20190214181655816_COVER1" quality="low" />
+<Image src={baldisbold} alt="baldisbold" quality="low" />
+<Image src={amb} alt="amb" quality="low" />
+<Image src={a3p02} alt="a3p02" quality="low" />
+<Image src={TungstenBulbsSmokingBongs} alt="TungstenBulbsSmokingBongs" quality="low" />
+<Image src={duba} alt="duba" quality="low" />
+<Image src={amittr} alt="amittr" quality="low" />
+<Image src={shitpost} alt="shitpost" quality="low" />
+<Image src={nightm_3} alt="nightm_3" quality="low" />
+<Image src={climate_change_small} alt="climate_change_small" quality="low" />
+<Image src={FALL} alt="FALL" quality="low" />
+<Image src={Rockmonster} alt="Rockmonster" quality="low" />
+<Image src={stoneocean} alt="stoneocean" quality="low" />
+<Image src={tea} alt="tea" quality="low" />
+<Image src={dontletmefall} alt="dontletmefall" quality="low" />
+<Image src={a404} alt="a404" quality="low" />
+<Image src={shaktimaan} alt="shaktimaan" quality="low" />
+<Image src={Untitled_1_2} alt="Untitled_1_2" quality="low" />
+<Image src={hittarthsamurai} alt="hittarthsamurai" quality="low" />
+<Image src={abeysaale} alt="abeysaale" quality="low" />
+<Image src={butterfliesinstomach} alt="butterfliesinstomach" quality="low" />
+<Image src={crucifyme} alt="crucifyme" quality="low" />
+<Image src={KEANU} alt="KEANU" quality="low" />
+<Image src={nohelp} alt="nohelp" quality="low" />
+<Image src={a404_2} alt="a404_2" quality="low" />
+<Image src={Diwana} alt="Diwana" quality="low" />
+<Image src={I_AM_A_GOD} alt="I_AM_A_GOD" quality="low" />
+<Image src={outrun} alt="outrun" quality="low" />
+<Image src={nightm_1} alt="nightm_1" quality="low" />
+<Image src={detrasdh} alt="detrasdh" quality="low" />
+<Image src={modi} alt="modi" quality="low" />
+<Image src={escape} alt="escape" quality="low" />
+<Image src={chai} alt="chai" quality="low" />
+<Image src={makani} alt="makani" quality="low" />
+<Image src={Caveman} alt="Caveman" quality="low" />
+<Image src={spacetrip} alt="spacetrip" quality="low" />
+<Image src={firebreathingmonk} alt="firebreathingmonk" quality="low" />
+<Image src={mando} alt="mando" quality="low" />
+</div>
+
+Artworks (c) by Hitarth Thummar
+
+The above artworks are licensed under a
+Creative Commons Attribution-ShareAlike 4.0 International License.
+
+You should have received a copy of the license along with this
+work.  If not, see http://creativecommons.org/licenses/by-sa/4.0/webp".
+</div>
+</BaseBlogPost>

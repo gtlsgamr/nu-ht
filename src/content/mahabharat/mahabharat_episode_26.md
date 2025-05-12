@@ -1,6 +1,6 @@
 ---
 title:  Episode 26 - Ran-Chhod
-published: 2022-03-13
+date: "2022-03-13"
 description: A war ends, and another begins.
 ---
 #### Ran-Chhod

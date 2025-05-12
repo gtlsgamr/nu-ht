@@ -1,7 +1,7 @@
 ---
 title: "Now"      
 description: ""      
-published: 2021-12-08
+date: "2021-12-08"
 ---     
 I see light-headed hipsters high on      
 Sensationalized trends      

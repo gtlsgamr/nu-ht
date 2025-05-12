@@ -1,7 +1,7 @@
 ---
 title: "Mangoes in cardboard boxes"
 description: ""
-published: 2021-12-08
+date: "2021-12-08"
 ---
 like alcohol in the stone pits    
 hailed, wanted, but lonely.    

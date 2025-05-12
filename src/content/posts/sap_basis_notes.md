@@ -1,7 +1,7 @@
 ---
 title: "SAP Basis beginner notes"
 description: "Digitized notes for a rookie SAP Basis consultant use."
-published: 2023-08-20
+date: "2023-08-20"
 ---
 
 The below notes were hand written by a collegue and I digitized them for public use. These are especially useful for beginner SAP Basis consultants looking for a quick cheatsheet. Keep in mind, I am not responsible for any broken production systems if you mess up. The below content is provided on as-is basis.

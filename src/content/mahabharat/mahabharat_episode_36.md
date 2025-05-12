@@ -1,6 +1,6 @@
 ---
 title:  Episode 36 - Pandavs leave for Hastinapur
-published: 2023-04-29
+date: "2023-04-29"
 description: Pandavs, after being discovered as alive, plan to leave for Hastinapur.
 ---
 #### Pandavs leave for Hastinapur

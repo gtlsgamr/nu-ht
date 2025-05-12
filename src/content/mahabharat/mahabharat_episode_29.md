@@ -1,6 +1,6 @@
 ---
 title:  Episode 29 - Lakshyagrah
-published: 2022-06-02
+date: "2022-06-02"
 description: Duryodhan asks Dhritrashtra to send the Pandav brothers to Varnavat to attend a festival. He threatens to commit suicide if Pandav brothers are not sent to Varnavat.
 ---
 #### Lakshyagrah

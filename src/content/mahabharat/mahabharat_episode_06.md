@@ -1,6 +1,6 @@
 ---
 title: "Episode 06 - The birth of Pandu, Dhritrashtra and Vidur"
-published: 2021-12-14
+date: "2021-12-14"
 description: ""
 ---
 #### NOTE: 

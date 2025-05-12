@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseBlogPost from '../../layouts/BaseBlogPost.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('poems');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<BaseBlogPost frontmatter={entry.data} title={entry.data.title} description={entry.data.description}>
+    <div class="border border-dashed border-gray-500 p-4 my-4 mx-4">
+    <header class="mx-auto">
+        <h1 class="md:text-5xl title text-3xl article-title mx-auto mb-2">{entry.data.title}</h1>
+        <time class="mx-auto" datetime={entry.data.date}>{entry.data.date}</time>
+      </header>
+      <content class="md:text-lg">
+        <Content />
+    </content>
+</div>
+
+</BaseBlogPost>
+
+<style>
+.title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400 !important;
+    font-style: italic;
+  }
+</style>

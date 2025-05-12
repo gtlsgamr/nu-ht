@@ -1,6 +1,6 @@
 ---
 title : "Episode 32 - Hidimb Vadh"
-published : 2023-03-18
+date : "2023-03-18"
 description : "Bhishma comes to know about Pandava's escape. Pandavs go in exile. Bheem gets married."
 ---
 #### Hidimb Vadh

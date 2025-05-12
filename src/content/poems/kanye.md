@@ -1,7 +1,7 @@
 ---
 title: "kanye"
 description: ''
-published: 2021-12-08
+date: "2021-12-08"
 ---
 I can't help but hear     
 The soundtrack to my self destruction     

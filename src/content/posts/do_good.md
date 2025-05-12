@@ -1,7 +1,7 @@
 ---
 title: "Doing good."
 description: "An ode to 202x, doesn't matter which."
-published: 2021-12-31
+date: "2021-12-31"
 ---
 I am writing this at 11:14 PM on 31st December 2021. But it doesn't really
 matter what date or what time is it as long as it is a new beginning for

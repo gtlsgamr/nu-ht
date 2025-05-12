@@ -1,6 +1,6 @@
 ---
 title:  Episode 22 - Drona and Karna
-published: 2021-12-26
+date: "2021-12-26"
 description: Guru Drona meets Karna.
 ---
 #### Recap 

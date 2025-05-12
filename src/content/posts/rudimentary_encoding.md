@@ -1,7 +1,7 @@
 ---
 title: "Rudimentary Encoding of text using symbols in a grid"
 description: "A rudimentary way to encode text using unique keys on paper."
-published: 2023-04-20
+date: "2023-04-20"
 ---
 This is a method to encode text I learned from my cousin when I was a kid. I
 thought it was the most awesome thing in the world back then! Basically the

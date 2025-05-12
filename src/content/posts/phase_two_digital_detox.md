@@ -1,7 +1,7 @@
 ---
 title: "Update on digital detox"
 description: "The second phase of digital detox"
-published: 2022-08-18
+date: "2022-08-18"
 ---
 Some time ago, I expressed my desire about [leaving social
 media](/blog/getting_tired_of_technology). It has

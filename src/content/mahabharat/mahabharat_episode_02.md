@@ -1,7 +1,7 @@
 ---
 title:  Episode 02 - Ganga reveals the Truth
 description: ""
-published: 2021-12-10
+date: "2021-12-10"
 ---
 #### Recap
 

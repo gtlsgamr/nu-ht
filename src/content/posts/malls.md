@@ -1,7 +1,7 @@
 ---
 title: "Malls"
 description: "My experience at a mall, and why I would never go to one again."
-published: 2022-06-20
+date: "2022-06-20"
 ---
 I recently went to a mall after a long time. After living in a mostly rural
 area for about two years due to COVID, this was my first visit to a city.

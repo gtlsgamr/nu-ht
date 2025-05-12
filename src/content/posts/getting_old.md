@@ -1,7 +1,7 @@
 ---
 title: "Getting old."
 description: "What it might feel like to see the world wear down."
-published: 2022-03-25
+date: "2022-03-25"
 ---
 I always wonder what it must be like to get old. To see the world prosper
 around you while you wither away into bits and pieces. I don't want to get old.

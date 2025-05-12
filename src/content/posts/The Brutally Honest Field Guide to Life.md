@@ -1,7 +1,7 @@
 ---
 title: "The Brutally Honest Field Guide to Life"
-description: "A guide that I wrote from my own experiences"
-published: 2025-04-23
+description: "k"
+date: "2025-04-23"
 ---
 
 _This isn't your gentle, hand-holding advice. It's a blunt toolkit of real lessons I've learned the hard way. If you

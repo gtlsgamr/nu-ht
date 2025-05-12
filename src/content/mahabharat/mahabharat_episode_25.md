@@ -1,6 +1,6 @@
 ---
 title:  Episode 25 - Drona's revenge
-published: 2022-02-23
+date: "2022-02-23"
 description: Drona exacts revenge against king Drupad.
 ---
 #### Drona's revenge

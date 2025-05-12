@@ -1,7 +1,7 @@
 ---
 title: "Putting an end to the Mahabharat reviews" 
 description: "Discontinuation of my Mahabharat TV Show reviews." 
-published: 2024-11-15 
+date: "2024-11-15" 
 ---
 I think this has been long overdue. I will be discontinuing the Mahabharat review series that I started more than two
 years ago. Despite promising multiple times that I will keep going on, I have come to a realization that I won't be able

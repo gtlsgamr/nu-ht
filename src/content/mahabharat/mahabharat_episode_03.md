@@ -1,7 +1,7 @@
 ---
 title:  Episode 03 - The Vow (Bhishma Pratigya)
 description: ""
-published: 2021-12-11
+date: "2021-12-11"
 ---
 #### Recap
 

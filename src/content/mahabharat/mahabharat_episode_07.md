@@ -1,6 +1,6 @@
 ---
 title:  Episode 07 - The birth of Karna
-published: 2021-12-15
+date: "2021-12-15"
 description: ""
 ---
 #### Recap 

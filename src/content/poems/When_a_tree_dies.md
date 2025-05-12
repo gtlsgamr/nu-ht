@@ -1,7 +1,7 @@
 ---
 title: "When_a_tree_dies"
 description: ''
-published: 2021-12-08
+date: "2021-12-08"
 ---
 When a tree dies     
      

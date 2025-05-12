@@ -1,7 +1,7 @@
 ---
 title: "Side_mirror"
 description: ''
-published: 2021-12-08
+date: "2021-12-08"
 ---
 I love you, you loved me     
 i'm riding alone, it's just me     

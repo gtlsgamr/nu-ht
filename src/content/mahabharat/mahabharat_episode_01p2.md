@@ -1,7 +1,7 @@
 ---
 title:  Episode 01, part 2 - The wedding of Shantanu
 description: ""
-published: 2021-12-09
+date: "2021-12-09"
 ---
 #### Recap
 

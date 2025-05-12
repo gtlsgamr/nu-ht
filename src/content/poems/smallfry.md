@@ -1,7 +1,7 @@
 ---
 title: "Small Fry"
 description: ""
-published: 2021-12-08
+date: "2021-12-08"
 ---
 Universes die.    
 Then what am I?    

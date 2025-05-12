@@ -1,0 +1,100 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+const pageTitle = "Personal Website and blog";
+const poemPosts = await getCollection("poems");
+const blogPosts = await getCollection("posts");
+// const reviewPosts = await getCollection("mahabharat");
+const allPosts = [...poemPosts, ...blogPosts];
+const recentPosts = allPosts
+    .sort(
+        (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    )
+    .slice(0, 5);
+---
+
+<Base title="home">
+  <div class="md:grid md:grid-cols-3 bg-[url('/public/background.png')] md:gap-4 m-5 md:text-xl">
+    <div
+        class="prose bg-[url('/public/background.png')] md:text-lg md:col-span-2 order-first md:text-left border border-dashed border-gray-500 mt-2 mb-2 p-4"
+    >
+      <p class="pb-2"><b>Welcome, dear visitor, to my personal website!</b></p>
+      <p>
+        Having a website is a matter of leaving a digital footprint, a way to
+        express myself, and a platform to share my thoughts and creations with
+        the world. This site is a reflection of who I am, what I do, and what I
+        love. It's a space where I can be myself, explore my interests, and
+        connect with like-minded individuals.
+        I am Hitarth, a tech enthusiast from India. I'm passionate about creativity,
+        storytelling, and technology, and this website is my nook on the internet to express that
+        passion.
+      </p>
+      <p>
+        Back in 2016, I ventured into the world of digital art. It was a year of
+        exploration and creativity, and the result is a collection of digital
+        artwork that I'm quite proud of. You can check out my creations right <a href="/artwork">here</a> on this site. Last but not least, I was the creator of
+        <a href="https://tildevarsh.in">~tildevarsh</a>, <em>(now defunct)</em>, a vibrant online space where I used to spend a lot of my time. It was a
+        wonderful community, and I'd forever cherish the things we did there.
+      </p>
+      <p>
+        So, take a look around, explore, and enjoy your stay. This is my corner
+        of the internet, and I'm glad to share it with you.
+      </p>
+      <hr class="my-2" />
+      <blockquote class="text-xl italic font-semibold">
+        <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+          <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+        </svg>
+        "We behold what we are, and we are what we behold."
+      </blockquote>
+
+
+    </div>
+    <div class="md:col-span-1 flex flex-col gap-4">
+      <!-- Recent Posts Box -->
+      <div class="border border-dashed border-gray-500 mt-2 mb-2 p-4">
+        <div class="serifs">Recent Posts</div>
+        {
+          recentPosts.map((post) => (
+              <div class="md:text-lg my-4">
+                {" "}
+                <a class="recents" href={post.collection + "/" + post.slug}>
+                  {" "}
+                  {post.data.title}
+                </a>{" "}
+              </div>
+          ))
+        }
+      </div>
+
+      <!-- Get in Touch Box -->
+      <div class="border border-dashed border-gray-500 mt-2 mb-2 p-4">
+        <div class="serifs">Get in touch</div><br>
+
+        <ul>
+          <li class="">
+            <b>Email:</b> hittarth91 [at] gmail [dot] com / PGP Key
+          </li><br>
+          <li class="">
+            <b>IRC:</b> Find me as gtlsgamr @ #gnulinuxindia:libera.chat and @ #tildevarsh:libera.chat
+          </li><br>
+          <li class=""><b>Connect </b>on <a href="https://github.com/gtlsgamr">Github</a> and <a href="https://github.com/gtlsgamr">Gitlab</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  * {
+    font-family: "Droid Serif", serif;
+  }
+  .serifs {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .recents {
+    color: rgb(49, 49, 49) !important;
+  }
+</style>

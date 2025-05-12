@@ -1,6 +1,6 @@
 ---
 title: Episode 39 - Indraprastha
-published: 2024-05-06
+date: "2024-05-06"
 description: Indraprastha is built by the Pandavs.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title:  Episode 01, part 1 - The story of king Bharat
 description: ""
-published: 2021-12-08
+date: "2021-12-08"
 ---
 #### Intro
 

@@ -1,7 +1,7 @@
 ---
 title: "Setting up a basic mail server"
 description: "How to set up a basic mail server using postfix + dovecot."
-published: 2022-11-04
+date: "2022-11-04"
 ---
 After messing around for a LONG time, I finally have a way to set up a basic
 mail server using postfix + dovecot.
