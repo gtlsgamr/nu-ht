@@ -2,27 +2,56 @@
 import { getCollection } from "astro:content";
 import BaseBlogPost from "../../layouts/BaseBlogPost.astro";
 import BlogPreview from "../../components/BlogPreview.astro";
+
 const pageTitle = "Blog posts";
 const allPosts = await getCollection("posts");
-const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+// Group by year
+const postsByYear = sortedPosts.reduce((acc, post) => {
+  const year = new Date(post.data.date).getFullYear();
+  acc[year] = acc[year] || [];
+  acc[year].push(post);
+  return acc;
+}, {});
 ---
 
 <BaseBlogPost title={pageTitle}>
   <div class="border border-dashed bg-[url('/public/background.png')] border-gray-500 p-4 my-4 mx-4">
     <h1 class="bg-[url('/public/background.png')] md:text-5xl title text-3xl article-title mb-10">Blogposts</h1>
-    <ul class="prose bg-[url('/public/background.png')]">
-    {
-      sortedPosts.map((post) => (
-        <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="posts"/>
-      ))
-    }
-  </ul></div>
+
+    <div class="prose bg-[url('/public/background.png')] space-y-10">
+      {
+        Object.entries(postsByYear)
+            .sort((a, b) => b[0] - a[0]) // Descending year sort
+  .map(([year, posts]) => (
+            <section>
+              <h2 class="text-2xl md:text-3xl font-semibold serifs mb-4">{year}</h2>
+              <ul class="space-y-4">
+                {
+                  posts.map(post => (
+                      <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="posts"/>
+                  ))
+                }
+              </ul>
+            </section>
+        ))
+      }
+    </div>
+  </div>
 </BaseBlogPost>
 
 <style>
   .title {
     font-family: "Playfair Display", serif;
     font-weight: 400 !important;
+    font-style: italic;
+  }
+  .serifs {
+    font-family: "Playfair Display", serif;
     font-style: italic;
   }
 </style>
