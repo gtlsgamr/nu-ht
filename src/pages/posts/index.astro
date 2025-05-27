@@ -20,10 +20,10 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
 ---
 
 <BaseBlogPost title={pageTitle}>
-  <div class="border border-dashed bg-[url('/public/background.png')] border-gray-500 p-4 my-4 mx-4">
-    <h1 class="bg-[url('/public/background.png')] md:text-5xl title text-3xl article-title mb-10">Blogposts</h1>
+  <div class="border border-dashed  border-gray-500 p-4 my-4 mx-4">
+    <h1 class=" md:text-5xl title text-3xl article-title mb-10">Blogposts</h1>
 
-    <div class="prose bg-[url('/public/background.png')] space-y-10">
+    <div class="prose  space-y-10">
       {
         Object.entries(postsByYear)
             .sort((a, b) => b[0] - a[0]) // Descending year sort
