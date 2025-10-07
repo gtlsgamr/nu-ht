@@ -2,6 +2,7 @@
 title: "स्पर्श"
 description: ""
 date: "2025-07-09"
+tags: ["death", "introspection", "hindi", "life"]
 ---
 आज मुझे मृत्यु ने स्पर्श किया।    
     

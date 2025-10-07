@@ -2,6 +2,7 @@
 title: "Add.noise"
 description: ''
 date: "2021-12-08"
+tags: ["social commentary", "silence", "violence", "injustice"]
 ---
 Decibels upon decibels     
 of your absence uncalled for.     

@@ -2,6 +2,7 @@
 title: "Where did the joy of learning things go?"
 description: "The effect of media saturation on the natural urge to learn things."
 date: "2022-02-15"
+tags: ["technology", "reflection", "media", "philosophy"]
 ---
 There used to be a time when learning something new meant hours of fun. My
 parents bought me an Encyclopedia as a birthday gift when I was a kid and I

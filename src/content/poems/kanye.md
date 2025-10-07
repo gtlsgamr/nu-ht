@@ -2,6 +2,7 @@
 title: "kanye"
 description: ''
 date: "2021-12-08"
+tags: ["fear", "music", "introspection", "darkness"]
 ---
 I can't help but hear     
 The soundtrack to my self destruction     

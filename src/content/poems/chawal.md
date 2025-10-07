@@ -2,6 +2,7 @@
 title: "चावल"
 description: 'हिंदी कविता '
 date: "2023-05-13"
+tags: ["nostalgia", "home", "childhood", "hindi"]
 ---
 आज मुझे चावल हाथ से खाने दो। 
 

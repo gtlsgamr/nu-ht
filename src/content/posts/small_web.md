@@ -2,6 +2,7 @@
 title: "Small web"
 description: "A look into small web protocols, their impact and the distraction from corporate vanity they provide."
 date: "2022-06-30"
+tags: ["technology", "web", "gemini", "minimalism"]
 ---
 For quite a long time now, I have been trying to get away from the "modern"
 web. The corporate hosted content farms that serve as nothing but money making

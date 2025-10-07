@@ -2,6 +2,7 @@
 title: "Small Fry"
 description: ""
 date: "2021-12-08"
+tags: ["mortality", "existentialism", "time", "introspection"]
 ---
 Universes die.    
 Then what am I?    

@@ -2,6 +2,7 @@
 title:  Episode 33 - Bakasur Vadh
 date: "2023-03-27"
 description: Pandavs arrive in Ekchakranagri, and face another demon.
+tags: ["mahabharat", "tv-review", "bheem", "mythology"]
 ---
 #### Bakasur Vadh
 > Ye yug adarsho ka yug nahi hai. (This is not an age of ideals.)

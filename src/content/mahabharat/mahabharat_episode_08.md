@@ -2,6 +2,7 @@
 title:  Episode 08 - Madri
 date: "2021-12-16"
 description: ""
+tags: ["mahabharat", "tv-review", "pandu", "madri"]
 ---
 #### Recap 
 We left the court of Hastinapur under the able leadership of Pandu when we last

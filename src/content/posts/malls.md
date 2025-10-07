@@ -2,6 +2,7 @@
 title: "Malls"
 description: "My experience at a mall, and why I would never go to one again."
 date: "2022-06-20"
+tags: ["reflection", "culture", "consumerism", "personal"]
 ---
 I recently went to a mall after a long time. After living in a mostly rural
 area for about two years due to COVID, this was my first visit to a city.

@@ -2,6 +2,7 @@
 title:  Episode 34 and 35 - Draupadi's Swayamvar
 date: "2023-04-01"
 description: Pandavs attend the swayamvar of princess Draupadi, the daughter of king Drupad.
+tags: ["mahabharat", "tv-review", "draupadi", "arjun"]
 ---
 #### Bakasur Vadh
 > Vartmaan bhagya ki kokh se janm nahi leta, Vartmaan Ateet ki kokh se janm leta hai.

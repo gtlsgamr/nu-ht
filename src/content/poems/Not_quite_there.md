@@ -2,6 +2,7 @@
 title: "Not_quite_there"
 description: ''
 date: "2021-12-08"
+tags: ["loss", "fear", "relationships", "introspection"]
 ---
 I wanted you to know,     
 I've been wondering lately.     

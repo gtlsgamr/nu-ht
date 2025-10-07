@@ -2,6 +2,7 @@
 title:  Episode 12 - PutanaVadh
 date: "2021-12-20"
 description: ""
+tags: ["mahabharat", "tv-review", "krishna", "mythology"]
 ---
 #### Recap 
 The eighth child of Devaki was saved by divine intervention. He is now the child of Yashoda and Nandraj from Gokul village.

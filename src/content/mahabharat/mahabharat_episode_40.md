@@ -2,6 +2,7 @@
 title: Episode 40 - Subhadra Haran
 date: "2024-05-14"
 description: Arjun kidnaps and marries Subhadra.
+tags: ["mahabharat", "tv-review", "arjun", "subhadra"]
 ---
 
 #### Subhadra Haran

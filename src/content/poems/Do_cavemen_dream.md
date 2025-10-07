@@ -2,6 +2,7 @@
 title: "Do cavemen dream"
 description: ''
 date: "2021-12-08"
+tags: ["dreams", "fear", "life", "introspection"]
 ---
 Do cavemen dream
 of stormy skies, spread far and wide?     

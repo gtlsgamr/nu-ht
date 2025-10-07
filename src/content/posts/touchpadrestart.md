@@ -2,6 +2,7 @@
 title: "[FIX] ELan touchpad stops working at boot"
 description: "Touch pad issue fix on hp laptops"
 date: "2021-12-08"
+tags: ["tutorial", "linux", "fix"]
 ---
 There was this issue that I faced in my system **(HP Pavilion Gaming 15 Laptop)** in which the touchpad **(ElanTech)** would stop working when the laptop booted, the fix to which was to move my finger on the touchpad when the system was booting up. Doing this every time was not convenient, so it took me a while, but this is what I did.
 

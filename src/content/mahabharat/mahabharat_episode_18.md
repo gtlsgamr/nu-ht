@@ -2,6 +2,7 @@
 title:  Episode 18 - The Death of Pandu
 date: "2021-12-22"
 description: ""
+tags: ["mahabharat", "tv-review", "pandu", "family"]
 ---
 #### Recap 
 Krishna spends his childhood in Vrindavan performing leelas and kills the evil king Kansa.

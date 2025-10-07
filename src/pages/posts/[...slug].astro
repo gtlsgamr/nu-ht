@@ -17,6 +17,13 @@ const { Content } = await entry.render();
     <header class="mx-auto">
         <h1 class="md:text-5xl title text-3xl article-title mx-auto mb-2">{entry.data.title}</h1>
         <time class="mx-auto" datetime={entry.data.date}>{entry.data.date}</time>
+        {entry.data.tags && entry.data.tags.length > 0 && (
+          <div class="tags-container">
+            {entry.data.tags.map((tag) => (
+              <a href={`/tags/${tag}`} class="tag">#{tag}</a>
+            ))}
+          </div>
+        )}
       </header>
       <content class="md:text-lg">
         <Content />
@@ -30,5 +37,19 @@ const { Content } = await entry.render();
     font-family: "Playfair Display", serif;
     font-weight: 400 !important;
     font-style: italic;
+  }
+  .tags-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+  a.tag {
+    color: black !important;
+    text-decoration: underline !important;
+    font-size: 0.9em;
+  }
+  a.tag:hover {
+    opacity: 0.7;
   }
 </style>

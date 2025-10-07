@@ -2,6 +2,7 @@
 title: "The Brutally Honest Field Guide to Life"
 description: "k"
 date: "2025-04-23"
+tags: ["philosophy", "advice", "personal", "life"]
 ---
 
 _This isn't your gentle, hand-holding advice. It's a blunt toolkit of real lessons I've learned the hard way. If you

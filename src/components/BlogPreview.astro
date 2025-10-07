@@ -1,15 +1,39 @@
 ---
-const {title, date, slug,type} = Astro.props;
+const {title, date, slug, type, tags = []} = Astro.props;
 const options = {
     year: 'numeric', month: 'long', day: 'numeric'
 };
 ---
 <div>
-    <a  href={slug}><div class="mt-5  text-xl text-bold">{title} </div></a>{new Date(date).toLocaleString('en-US',options)}
+    <a  href={slug}><div class="mt-5  text-xl text-bold">{title} </div></a>
+    <div class="date-tags">
+        <span class="date">{new Date(date).toLocaleString('en-US',options)}</span>
+    </div>
 </div>
 
 <style>
-      a{
+  a{
     text-decoration: none !important;
+  }
+  .date-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .date {
+    color: inherit;
+  }
+  .tags-inline {
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+  a.tag {
+    color: black !important;
+    text-decoration: underline !important;
+    font-size: 0.9em;
+  }
+  a.tag:hover {
+    opacity: 0.7;
   }
 </style>

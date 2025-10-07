@@ -2,6 +2,7 @@
 title: "The Trade-off"
 description: ""
 date: "2025-02-19"
+tags: ["nostalgia", "change", "life", "introspection"]
 ---
 Where is that guy?     
 The measly human, the small [fry](smallfry),    

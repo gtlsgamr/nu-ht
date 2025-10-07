@@ -1,7 +1,8 @@
 ---
-title: "Now"      
-description: ""      
+title: "Now"
+description: ""
 date: "2021-12-08"
+tags: ["social commentary", "trends", "identity", "criticism"]
 ---     
 I see light-headed hipsters high on      
 Sensationalized trends      

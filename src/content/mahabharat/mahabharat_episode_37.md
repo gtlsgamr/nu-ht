@@ -2,6 +2,7 @@
 title: Episode 37 - Hastinapur is Divided.
 date: "2023-08-08"
 description: Elders Decide on the Future of Hastinapur.
+tags: ["mahabharat", "tv-review", "politics", "family"]
 ---
 
 #### Hastinapur is Divided.

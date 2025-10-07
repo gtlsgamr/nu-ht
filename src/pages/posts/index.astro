@@ -33,7 +33,7 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
               <ul class="space-y-4">
                 {
                   posts.map(post => (
-                      <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="posts"/>
+                      <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="posts" tags={post.data.tags}/>
                   ))
                 }
               </ul>

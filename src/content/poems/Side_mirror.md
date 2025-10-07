@@ -2,6 +2,7 @@
 title: "Side_mirror"
 description: ''
 date: "2021-12-08"
+tags: ["love", "betrayal", "loneliness", "heartbreak"]
 ---
 I love you, you loved me     
 i'm riding alone, it's just me     

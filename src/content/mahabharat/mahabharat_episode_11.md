@@ -2,6 +2,7 @@
 title:  Episode 11 - The Birth of Shri Krishna
 date: "2021-12-19"
 description: ""
+tags: ["mahabharat", "tv-review", "krishna", "mythology"]
 ---
 #### Recap 
 Kansa terrorizes Mathura, and is prophesied to be killed by the eighth son of his

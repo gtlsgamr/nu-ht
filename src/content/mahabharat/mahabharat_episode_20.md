@@ -2,6 +2,7 @@
 title:  Episode 20 - How Bheem got his strength
 date: "2021-12-24"
 description: ""
+tags: ["mahabharat", "tv-review", "bheem", "duryodhan"]
 ---
 #### Recap 
 The main story is now in focus again with the Kauravas and the Pandavs studying

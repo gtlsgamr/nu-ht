@@ -2,6 +2,7 @@
 title: "Mere_traveller"
 description: ''
 date: "2021-12-08"
+tags: ["journey", "life", "loneliness", "introspection"]
 ---
 I am but a mere Traveller     
 On a dusty winding road,     

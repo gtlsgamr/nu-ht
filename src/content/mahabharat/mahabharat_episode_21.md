@@ -2,6 +2,7 @@
 title:  Episode 21 - Chivda
 date: "2021-12-25"
 description: ""
+tags: ["mahabharat", "tv-review", "drona", "krishna"]
 ---
 #### Recap 
 Internal politics continues as the children are pitted against each other fighting the previous generation's fights. 

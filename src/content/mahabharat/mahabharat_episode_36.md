@@ -2,6 +2,7 @@
 title:  Episode 36 - Pandavs leave for Hastinapur
 date: "2023-04-29"
 description: Pandavs, after being discovered as alive, plan to leave for Hastinapur.
+tags: ["mahabharat", "tv-review", "krishna", "politics"]
 ---
 #### Pandavs leave for Hastinapur
 > Mera hriday tumhare rajya ka vo bhaag hai, jise tum kabhi haar nahi sakte.

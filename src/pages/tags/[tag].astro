@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import BaseBlogPost from "../../layouts/BaseBlogPost.astro";
+import BlogPreview from "../../components/BlogPreview.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+  const allPoems = await getCollection("poems");
+  const allMahabharat = await getCollection("mahabharat");
+
+  const allContent = [
+    ...allPosts.map(p => ({ ...p, type: 'posts' })),
+    ...allPoems.map(p => ({ ...p, type: 'poems' })),
+    ...allMahabharat.map(p => ({ ...p, type: 'mahabharat' }))
+  ];
+
+  const uniqueTags = [...new Set(allContent.flatMap(post => post.data.tags || []))];
+
+  return uniqueTags.map((tag) => {
+    const filteredContent = allContent.filter((post) =>
+      post.data.tags?.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { content: filteredContent },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { content } = Astro.props;
+
+const sortedContent = content.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<BaseBlogPost title={`Tag: ${tag}`}>
+  <div class="border border-dashed border-gray-500 p-4 my-4 mx-4">
+    <h1 class="md:text-5xl title text-3xl article-title mb-10">
+      Posts tagged with "{tag}"
+    </h1>
+
+    <div class="prose space-y-10">
+      <ul class="space-y-4">
+        {
+          sortedContent.map((post) => (
+            <BlogPreview
+              title={post.data.title}
+              date={post.data.date}
+              body={post.body}
+              slug={post.slug}
+              type={post.type}
+              tags={post.data.tags}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</BaseBlogPost>
+
+<style>
+  .title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400 !important;
+    font-style: italic;
+  }
+</style>

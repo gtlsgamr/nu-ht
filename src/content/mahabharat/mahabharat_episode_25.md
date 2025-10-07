@@ -2,6 +2,7 @@
 title:  Episode 25 - Drona's revenge
 date: "2022-02-23"
 description: Drona exacts revenge against king Drupad.
+tags: ["mahabharat", "tv-review", "drona", "war"]
 ---
 #### Drona's revenge
 

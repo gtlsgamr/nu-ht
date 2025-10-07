@@ -2,6 +2,7 @@
 title:  "Puddles"
 description:  "Thoughts on puddles."
 date:  "2025-06-24"
+tags: ["philosophy", "reflection", "life"]
 ---
 When it rains, and I’m driving, I try not to drive through puddles and splash mud on those around me. Truly, it’s my
 only

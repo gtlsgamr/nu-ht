@@ -2,6 +2,7 @@
 title: "Teacups"
 description: ""
 date: "2021-12-08"
+tags: ["loneliness", "longing", "despair", "hope"]
 ---
 We sit here    
 Alone, broken    

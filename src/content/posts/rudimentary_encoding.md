@@ -2,6 +2,7 @@
 title: "Rudimentary Encoding of text using symbols in a grid"
 description: "A rudimentary way to encode text using unique keys on paper."
 date: "2023-04-20"
+tags: ["tutorial", "cryptography", "fun"]
 ---
 This is a method to encode text I learned from my cousin when I was a kid. I
 thought it was the most awesome thing in the world back then! Basically the

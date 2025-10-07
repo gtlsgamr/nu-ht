@@ -1,7 +1,8 @@
 ---
-title: "June"      
-description: ""      
+title: "June"
+description: ""
 date: "2021-12-08"
+tags: ["nature", "memory", "nostalgia", "life"]
 ---     
 Of cloudy skies and petrichor,      
 Thirty days an eternity.      

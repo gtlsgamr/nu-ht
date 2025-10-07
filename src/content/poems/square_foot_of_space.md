@@ -2,6 +2,7 @@
 title: "Square foot of space"
 description: ""
 date: "2025-07-08"
+tags: ["loneliness", "longing", "introspection", "love"]
 ---    
 Hopes and dreams    
 and the troubles in between    

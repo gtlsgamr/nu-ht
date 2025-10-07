@@ -2,6 +2,7 @@
 title:  Episode 10 - The prophecy
 date: "2021-12-18"
 description: ""
+tags: ["mahabharat", "tv-review", "krishna", "kansa"]
 ---
 #### Recap 
 Previously we saw the birth of the main players in this story, the Pandavs

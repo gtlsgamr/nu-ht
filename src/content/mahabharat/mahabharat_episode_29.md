@@ -2,6 +2,7 @@
 title:  Episode 29 - Lakshyagrah
 date: "2022-06-02"
 description: Duryodhan asks Dhritrashtra to send the Pandav brothers to Varnavat to attend a festival. He threatens to commit suicide if Pandav brothers are not sent to Varnavat.
+tags: ["mahabharat", "tv-review", "shakuni", "politics"]
 ---
 #### Lakshyagrah
 >  Karna: Yudhh to tabhi hota hai, jab yodhhaon ki gadao se chingariyaan nikalti hai! Jab ek ka baan dusre ke baan se jaa takrata hai! Jab ek yodhha ke ghaav se nikalte rakt ki dhaara, dusre yodhha ke ghaav se nikalti rakt ki dhaara se jaa milti hai! 

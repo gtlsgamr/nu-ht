@@ -2,6 +2,7 @@
 title: "Pretense"
 description: ''
 date: "2021-12-08"
+tags: ["deception", "facade", "exhaustion", "introspection"]
 ---
 This life that i lead     
 figured out, but really not     

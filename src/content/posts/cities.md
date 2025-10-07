@@ -2,6 +2,7 @@
 title: "Cities"
 description: "Cities and the difference they made"
 date: "2022-09-06"
+tags: ["reflection", "personal", "life", "culture"]
 ---
 I recently moved to a city. Well, *moved back* in a sense. It is the place
 where I completed my education and lived out my college days. The

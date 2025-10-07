@@ -2,6 +2,7 @@
 title: "Wrote_for_you"
 description: ''
 date: "2021-12-08"
+tags: ["love", "heartbreak", "poetry", "vulnerability"]
 ---
 I wrote for you.     
 Wasted a thousand words,     

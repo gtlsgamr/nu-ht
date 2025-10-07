@@ -2,6 +2,7 @@
 title: "The ride home"
 description: "The ride home to Talala"
 date: "2022-11-28"
+tags: ["personal", "nostalgia", "travel", "nature"]
 ---
 The drive back to my home in Talala is what I will cherish the most during my
 years in Gir. It just had this feel to it, I am not really sure if I can put it

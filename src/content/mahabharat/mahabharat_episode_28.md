@@ -2,6 +2,7 @@
 title:  Episode 28 - Rukmini's Rescue
 date: "2022-04-08"
 description: Krishna rescues Rukmini from getting forcefully married.
+tags: ["mahabharat", "tv-review", "krishna", "rukmini"]
 ---
 #### Rukmini's rescue
 > Yadi mujhe koi sachmuch pukarta hai, to mujhe aana hi padta hai.. aur kisi pukaar ko sunkar turant aa jane se bada anand koi nahi

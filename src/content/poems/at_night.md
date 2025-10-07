@@ -2,6 +2,7 @@
 title: "at_night"
 description: ''
 date: "2021-12-08"
+tags: ["night", "solitude", "struggle", "introspection"]
 ---
 It's beautiful out here at night.     
 You should come see it sometime.     

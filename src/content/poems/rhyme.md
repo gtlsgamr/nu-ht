@@ -2,6 +2,7 @@
 title: "rhyme"
 description: ''
 date: "2021-12-08"
+tags: ["love", "heartbreak", "longing", "vulnerability"]
 ---
 Two quick beats,     
 miss a step     

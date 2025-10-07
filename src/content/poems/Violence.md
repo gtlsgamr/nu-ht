@@ -2,6 +2,7 @@
 title: "Violence"
 description: ''
 date: "2021-12-08"
+tags: ["violence", "struggle", "introspection", "war"]
 ---
 Gunships crash     
 And burn into nothingness,     

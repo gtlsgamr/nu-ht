@@ -2,6 +2,7 @@
 title:  Episode 22 - Drona and Karna
 date: "2021-12-26"
 description: Guru Drona meets Karna.
+tags: ["mahabharat", "tv-review", "drona", "karna"]
 ---
 #### Recap 
 Dronacharya becomes the new Guru of the princes, and is instantly a thorn in the side of Shakuni. 

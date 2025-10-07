@@ -2,6 +2,7 @@
 title:  Episode 04 - Ichchha Mrityu
 description: ""
 date: "2021-12-12"
+tags: ["mahabharat", "tv-review", "bhishma", "shantanu"]
 ---
 #### Recap
 

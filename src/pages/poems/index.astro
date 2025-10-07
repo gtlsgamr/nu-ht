@@ -39,6 +39,7 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
                           body={post.body}
                           slug={post.slug}
                           type="poems"
+                          tags={post.data.tags}
                       />
                   ))
                 }

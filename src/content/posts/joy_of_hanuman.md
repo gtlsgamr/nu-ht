@@ -2,6 +2,7 @@
 title: "Lessons from Hanumanji"
 description: "Why I worship hanumanji"
 date: "2021-12-08"
+tags: ["spirituality", "culture", "personal", "philosophy"]
 ---
 
 Shri Hanuman is the epitome of selfless service, courage, hope and strength. He is, and should be an inspiration to us all in more that one ways. Even for those who don't believe in him, his story is one with valuable life lessons. 

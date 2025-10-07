@@ -2,6 +2,7 @@
 title: "Episode 06 - The birth of Pandu, Dhritrashtra and Vidur"
 date: "2021-12-14"
 description: ""
+tags: ["mahabharat", "tv-review", "pandu", "dhritrashtra"]
 ---
 #### NOTE: 
 ***I have added a commenting functionality to the site, it is for mail-in comments so it may or may not be up your lane. Try it if you feel like!***

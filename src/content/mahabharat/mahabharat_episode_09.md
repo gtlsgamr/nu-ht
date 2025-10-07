@@ -2,6 +2,7 @@
 title:  Episode 09 - Dhritrashtra is king
 date: "2021-12-17"
 description: ""
+tags: ["mahabharat", "tv-review", "dhritrashtra", "pandu"]
 ---
 #### Recap 
 Last we saw Pandu in the woods, enjoying a well deserved vacation with his

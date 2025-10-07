@@ -2,6 +2,7 @@
 title: "Seasons"
 description: ''
 date: "2021-12-08"
+tags: ["nature", "life", "struggle", "perseverance"]
 ---
 I passed through     
 the biting winds of winter     

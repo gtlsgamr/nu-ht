@@ -2,6 +2,7 @@
 title : "Episode 32 - Hidimb Vadh"
 date : "2023-03-18"
 description : "Bhishma comes to know about Pandava's escape. Pandavs go in exile. Bheem gets married."
+tags: ["mahabharat", "tv-review", "bheem", "hidimba"]
 ---
 #### Hidimb Vadh
 > Shri ram ke vanvas hi se, lankapati ravan ke vinaash ka marg nikla tha!

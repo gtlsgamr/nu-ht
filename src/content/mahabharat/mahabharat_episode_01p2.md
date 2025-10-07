@@ -2,6 +2,7 @@
 title:  Episode 01, part 2 - The wedding of Shantanu
 description: ""
 date: "2021-12-09"
+tags: ["mahabharat", "tv-review", "shantanu", "ganga"]
 ---
 #### Recap
 

@@ -2,6 +2,7 @@
 title: "The Rise and Fall of Taarak Mehta ka Ooltah Chashmah"
 description: "How the supposed messiah of Indian comedy television lived long enough to see itself become the villain."
 date: "2022-01-15"
+tags: ["tv-review", "culture", "media", "reflection"]
 ---
 Taarak Mehta is a name that almost every Indian within a hundred meters of a TV
 connection should know. It is after all, one of the most beloved comedy TV

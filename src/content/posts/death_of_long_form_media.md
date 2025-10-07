@@ -2,6 +2,7 @@
 title: "Swipe up -- the death of long form media"
 description: The "swipe-up" media format and how it will kill informational content
 date: "2022-01-02"
+tags: ["technology", "media", "reflection", "culture"]
 ---
 The past few years have been what some might call, _distinctively
 disappointing_ for the media industry. As lives become busier and busier, it

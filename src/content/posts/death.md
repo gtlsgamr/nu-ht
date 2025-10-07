@@ -2,6 +2,7 @@
 title: "Death"
 description: "Thoughts on death."
 date: "2025-05-26"
+tags: ["philosophy", "reflection", "life", "personal"]
 ---
 I’ve spent years grappling with the idea of death.
 

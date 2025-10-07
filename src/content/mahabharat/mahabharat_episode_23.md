@@ -2,6 +2,7 @@
 title:  Episode 23 - Guru Dakshina
 date: "2021-12-27"
 description: The royal children are nearly done with their education. Everyone prepares for the graduation ceremony.
+tags: ["mahabharat", "tv-review", "eklavya", "arjun"]
 ---
 #### Recap 
 The princes train under drona while Bhishma worries about the kingdom's future.

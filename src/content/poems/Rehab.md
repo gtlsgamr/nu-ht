@@ -2,6 +2,7 @@
 title: "Rehab"
 description: ''
 date: "2021-12-08"
+tags: ["struggle", "introspection", "healing", "poetry"]
 ---
 This turmoil I feel,     
 Is it made up or is it real?     

@@ -2,6 +2,7 @@
 title: "Doing well."
 description: "An ode to 2022, the one that changed things."
 date: "2022-12-31"
+tags: ["reflection", "personal", "life", "philosophy"]
 ---
 A year ago a I wrote [about doing good](https://hitarththummar.xyz/blog/do_good). Today I am writing about doing
 well.

@@ -2,6 +2,7 @@
 title: "काला_चश्मा"
 description: ''
 date: "2021-12-08"
+tags: ["cynicism", "relationships", "introspection", "hindi"]
 ---
 भूल जा     
 जो भी तुझे खटक रहा है।     

@@ -1,7 +1,8 @@
 ---
 title:  Episode 24 - Rangbhoomi
 date: "2022-01-01"
-description: "Kaurav and Pandav princes show off their skills on their grand return to Hastinapur." 
+description: "Kaurav and Pandav princes show off their skills on their grand return to Hastinapur."
+tags: ["mahabharat", "tv-review", "arjun", "karna"]
 ---
 #### Rangbhoomi
 

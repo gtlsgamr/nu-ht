@@ -2,6 +2,7 @@
 title:  Episode 03 - The Vow (Bhishma Pratigya)
 description: ""
 date: "2021-12-11"
+tags: ["mahabharat", "tv-review", "bhishma", "dharma"]
 ---
 #### Recap
 

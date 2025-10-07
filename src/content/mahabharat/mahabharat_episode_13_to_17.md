@@ -2,6 +2,7 @@
 title:  Episode 13 to 17 - Krishna Leela
 date: "2021-12-21"
 description: ""
+tags: ["mahabharat", "tv-review", "krishna", "mythology"]
 ---
 #### Recap 
 An infant krishna, who is growing up in Gokul brings death to the demoness Putana send by Kansa.

@@ -2,6 +2,7 @@
 title:  Episode 31 - Aag
 date: "2023-01-30"
 description: The plan goes down on both sides. The palace is burned and the Pandavs walk away safely without anyone knowing.
+tags: ["mahabharat", "tv-review", "duryodhan", "karna"]
 ---
 #### Aag
 > Veeron ko veero ki bhaati ranbhoomi me marne ka saubhagya nahi mila. Mai jab

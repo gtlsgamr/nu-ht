@@ -2,6 +2,7 @@
 title:  Episode 01, part 1 - The story of king Bharat
 description: ""
 date: "2021-12-08"
+tags: ["mahabharat", "tv-review", "bharat", "shantanu"]
 ---
 #### Intro
 

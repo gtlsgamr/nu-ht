@@ -2,6 +2,7 @@
 title: "convert"
 description: ''
 date: "2021-12-08"
+tags: ["spirituality", "introspection", "transformation", "heaven"]
 ---
 like alcohol in the stone pits     
 hailed, wanted, but lonely.     

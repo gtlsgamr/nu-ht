@@ -2,6 +2,7 @@
 title: "Drowning"
 description: ''
 date: "2021-12-08"
+tags: ["hope", "despair", "struggle", "exhaustion"]
 ---
 I dream to see land     
 And flying seagulls on the shore     

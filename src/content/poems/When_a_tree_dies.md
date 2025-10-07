@@ -2,6 +2,7 @@
 title: "When_a_tree_dies"
 description: ''
 date: "2021-12-08"
+tags: ["death", "family", "legacy", "nature"]
 ---
 When a tree dies     
      

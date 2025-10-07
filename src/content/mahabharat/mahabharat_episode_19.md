@@ -2,6 +2,7 @@
 title:  Episode 19 - An uncertain future
 date: "2021-12-23"
 description: ""
+tags: ["mahabharat", "tv-review", "politics", "dharma"]
 ---
 #### Recap 
 The story of Krishna ends and the focus comes back to Hastinapur. Pandu dies

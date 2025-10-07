@@ -7,6 +7,7 @@ const postsCollection = defineCollection({
       title: z.string(),
       date: z.string(),
       description: z.string(),
+      tags: z.array(z.string()).default([]),
     })
 });
 
@@ -16,6 +17,7 @@ const mahabharatCollection = defineCollection({
     title: z.string(),
     date: z.string(),
     description: z.string(),
+    tags: z.array(z.string()).default([]),
   })
 });
 
@@ -25,6 +27,7 @@ const poemsCollection = defineCollection({
     title: z.string(),
     date: z.string(),
     description: z.string(),
+    tags: z.array(z.string()).default([]),
   })
 });
 

@@ -2,6 +2,7 @@
 title:  Episode 07 - The birth of Karna
 date: "2021-12-15"
 description: ""
+tags: ["mahabharat", "tv-review", "karna", "kunti"]
 ---
 #### Recap 
 Last we saw the beginnings of what would become the war between

@@ -2,6 +2,7 @@
 title: Episode 39 - Indraprastha
 date: "2024-05-06"
 description: Indraprastha is built by the Pandavs.
+tags: ["mahabharat", "tv-review", "krishna", "dharma"]
 ---
 
 NOTE: It has been a while since I wrote a review. Almost a year now I guess. I have been busy with work and other
