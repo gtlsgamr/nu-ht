@@ -49,7 +49,7 @@ const sortedContent = content.sort(
               title={post.data.title}
               date={post.data.date}
               body={post.body}
-              slug={post.slug}
+              slug={`/${post.type}/${post.slug}`}
               type={post.type}
               tags={post.data.tags}
             />
