@@ -60,3 +60,5 @@ confusion are not a misstep to be erased but the very engine of spirituality. Hi
 deal" but to **surrender** to its mystery. The answer lies in the poem's refrain: to accept that your intellect will fail,
 and in that surrender, to find peace and awe.
 
+What does it mean for us, today, to accept that our intellect will halt?
+
