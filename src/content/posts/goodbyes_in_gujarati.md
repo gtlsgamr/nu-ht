@@ -6,8 +6,8 @@ tags: ["philosophy", "reflection", "life", "personal"]
 ---
 The word _goodbye_ according to the Oxford Dictionary originates as follows:
 
-> late 16th century: contraction of_God be with you!_, with_good_substituted on the pattern of phrases such as_good
-morning_
+> late 16th century: contraction of God be with you!, with good substituted on the pattern of phrases such as good
+morning
 
 God be with you on this journey you are taking. I don’t know how you will fare, but _farewell_. These words are final.
 They give closure.
