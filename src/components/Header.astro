@@ -3,35 +3,74 @@ import data from "../../data.js";
 import { Icon } from 'astro-icon'
 import crest from '../assets/crest.png';
 import { Image } from 'astro:assets';
+
+const currentPath = Astro.url.pathname;
 ---
 
-<!-- - Serif title
-    - sans subtitle/something
-
-- line above title with nav-menu maybe, and a nice archaic logo -->
-<div class="flex flex-col justify-center text-center">
-  <span class="md:text-7xl text-5xl site-title md:block hidden"><a href="/"><Image class="inline" alt="crest" width=100 src={crest}/>{data.siteTitle}</a></span>
-  <span class="md:text-7xl text-5xl site-title md:hidden block"><a href="/">{data.siteMobileTitle}<Image class="inline" alt="crest" width=60 src={crest}/></a></span>
-  <div class="sticky top-0 z-50">
-  <nav class=" border-gray-900 border-t border-b flex justify-center p-1 space-x-4 px-6 md:flex">
-    <ul class="not-prose list-none flex space-x-4 font-bold font-sans md:text-xl">
-        <li><a href="/posts">Blog</a></li>
-        <li><a href="/artwork">Artwork</a></li>
-        <li><a href="/poems">Poetry</a></li>
-    </ul>
-<div class="space-x-4"></div>
-    <div class="ml-auto flex-row flex">
-        <a href="/atom.xml"><Icon class="w-6" name="mdi:rss"/></a>
+<header class="border-b-brutalist-thick border-brutalist-text bg-brutalist-surface">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Logo/Title Section -->
+    <div class="py-brutalist-lg md:py-brutalist-xl">
+      <a href="/" class="group block">
+        <div class="flex items-center gap-4 md:gap-6">
+          <div class="relative">
+            <Image
+              class="w-16 md:w-24 h-16 md:h-24 object-contain border-brutalist border-brutalist-text transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              alt="crest"
+              src={crest}
+            />
+            <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-1 -translate-y-1 -z-10 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform"></div>
+          </div>
+          <div>
+            <h1 class="text-brutalist-3xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none tracking-tight">
+              <span class="hidden md:inline">{data.siteTitle}</span>
+              <span class="md:hidden">{data.siteMobileTitle}</span>
+            </h1>
+            <div class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border mt-1 uppercase tracking-wider">
+              Writer &middot; Developer
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
-</nav></div>
-</div>
 
-<style>
-      *{
-        font-family: 'Droid Serif', serif;
-    }
-  .site-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-  }
-</style>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-brutalist-surface border-t-brutalist border-b-brutalist border-brutalist-text -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-brutalist-sm">
+        <ul class="flex gap-6 md:gap-8 list-none m-0 p-0">
+          <li>
+            <a
+              href="/posts"
+              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-orange hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath.startsWith('/posts') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
+            >
+              Blog
+            </a>
+          </li>
+          <li>
+            <a
+              href="/artwork"
+              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-orange hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath === '/artwork' ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
+            >
+              Artwork
+            </a>
+          </li>
+          <li>
+            <a
+              href="/poems"
+              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-orange hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath.startsWith('/poems') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
+            >
+              Poetry
+            </a>
+          </li>
+        </ul>
+        <a
+          href="/atom.xml"
+          class="p-2 hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors border-brutalist border-brutalist-text"
+          aria-label="RSS Feed"
+        >
+          <Icon class="w-5 h-5 md:w-6 md:h-6" name="mdi:rss"/>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,29 +1,42 @@
 ---
 import Base from "./Base.astro";
 const {title, description, date} = Astro.props;
+
+const options = {
+    year: 'numeric', month: 'long', day: 'numeric'
+};
+const formattedDate = date ? new Date(date).toLocaleString('en-US', options) : '';
 ---
 <Base title={title} description={description}>
-    <article class="prose mx-auto max-w-none  md:w-4/5">
-        <slot/>
-        To reply via email, <a href=`mailto:hittarth91@gmail.com?subject=Re:%20${title}`>click here</a>.
+    <article class="max-w-4xl mx-auto">
+        <!-- Title Section -->
+        <header class="mb-brutalist-xl border-b-brutalist-thick border-brutalist-text pb-brutalist-lg">
+            <h1 class="text-brutalist-3xl md:text-brutalist-5xl font-brutalist-black leading-none mb-brutalist-md">
+                {title}
+            </h1>
+            {formattedDate && (
+                <div class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border uppercase tracking-wider">
+                    {formattedDate}
+                </div>
+            )}
+        </header>
+
+        <!-- Content -->
+        <div class="prose prose-lg max-w-none mb-brutalist-2xl">
+            <slot/>
+        </div>
+
+        <!-- Reply Section -->
+        <footer class="border-t-brutalist border-brutalist-text pt-brutalist-lg mt-brutalist-2xl">
+            <div class="font-mono text-brutalist-sm md:text-brutalist-base">
+                <span class="text-brutalist-border uppercase tracking-wider">Reply via email:</span>
+                <a
+                    href={`mailto:hittarth91@gmail.com?subject=Re:%20${title}`}
+                    class="ml-2 font-brutalist-medium text-brutalist-orange underline hover:bg-brutalist-orange hover:text-brutalist-bg hover:no-underline px-2 py-1 transition-colors"
+                >
+                    Click here
+                </a>
+            </div>
+        </footer>
     </article>
 </Base>
-
-<style>
-    .article-title {
-        font-family: 'Playfair Display', serif;
-        font-weight: 600;
-    }
-
-    .prose {
-        color: #2f2f2f !important;
-        word-wrap: break-word;
-        word-break: normal;
-        max-width: none !important;
-    }
-
-    .prose h1 {
-        font-weight: 400;
-        color: #2f2f2f !important;
-    }
-</style>

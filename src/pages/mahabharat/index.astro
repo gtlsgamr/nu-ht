@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BaseBlogPost from "../../layouts/BaseBlogPost.astro";
+import Base from "../../layouts/Base.astro";
 import BlogPreview from "../../components/BlogPreview.astro";
 const pageTitle = "Mahabharat Reviews";
 const allPosts = await getCollection("mahabharat");
@@ -9,51 +9,63 @@ const sortedPosts = allPosts.sort(
 );
 ---
 
-<BaseBlogPost title={pageTitle}>
-  <div class="border  border-dashed border-gray-500 p-4 my-4 mx-4">
-    <h1 class="md:text-5xl title text-3xl article-title mb-10">
-      Mahabharat Reviews (Discontinued)
-    </h1>
-    <p class="md:text-xl">
-      This show is close to my heart as it was being rerun when I was a child
-      and I remember watching it everyday. This series started as an attempt to
-      provide a reading companion with the TV series. It is inspired by Alan
-      Sepinwall's reviews for *The wire*. Of course, both the shows are vastly
-      different, but I hope I will be able to do this justice. This show is
-      about the Indian epic Mahabharat, and it is nearly identical with the
-      source material, with a few hiccups here and there. It is ingrained in the
-      culture of India as the show that everyone watched when they were kids. No
-      matter the generation, at some point in time this show has always aired on
-      TV since 1988. I hope these episode reviews will serve as a faithful
-      reading companion when you watch the show.
-    </p><p>
-      <b
-        >P.S. These reviews only cover the actual show with 94 episodes and not
-        the pre-sequel-prequels that came in the 90s because they were clearly a
-        cashgrab riding on the success of the original.</b
-      >
-      <hr class="border-b border-gray-700" />
-    <ul class="prose ">
-      {
-        sortedPosts.map((post) => (
-          <BlogPreview
-            title={post.data.title}
-            date={post.data.date}
-            body={post.body}
-            slug={post.slug}
-            type="mahabharat"
-            tags={post.data.tags}
-          />
-        ))
-      }
-    </ul>
-  </div>
-</BaseBlogPost>
+<Base title={pageTitle}>
+  <div class="max-w-5xl mx-auto">
+    <!-- Page Header -->
+    <header class="mb-brutalist-2xl border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none mb-brutalist-xs">
+        Mahabharat Reviews
+      </h1>
+      <p class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-orange uppercase tracking-wider">
+        [Discontinued]
+      </p>
+    </header>
 
-<style>
-  .title {
-    font-family: "Playfair Display", serif;
-    font-weight: 400 !important;
-    font-style: italic;
-  }
-</style>
+    <!-- Introduction -->
+    <section class="mb-brutalist-2xl border-brutalist border-brutalist-text p-brutalist-lg">
+      <div class="space-y-brutalist-md text-brutalist-base md:text-brutalist-lg">
+        <p>
+          This show is close to my heart as it was being rerun when I was a child
+          and I remember watching it everyday. This series started as an attempt to
+          provide a reading companion with the TV series. It is inspired by Alan
+          Sepinwall's reviews for <em>The Wire</em>. Of course, both the shows are vastly
+          different, but I hope I will be able to do this justice. This show is
+          about the Indian epic Mahabharat, and it is nearly identical with the
+          source material, with a few hiccups here and there. It is ingrained in the
+          culture of India as the show that everyone watched when they were kids. No
+          matter the generation, at some point in time this show has always aired on
+          TV since 1988. I hope these episode reviews will serve as a faithful
+          reading companion when you watch the show.
+        </p>
+        <p class="font-brutalist-bold border-l-brutalist-thick border-brutalist-text pl-brutalist-md">
+          P.S. These reviews only cover the actual show with 94 episodes and not
+          the pre-sequel-prequels that came in the 90s because they were clearly a
+          cashgrab riding on the success of the original.
+        </p>
+      </div>
+    </section>
+
+    <!-- Reviews List -->
+    <section>
+      <div class="mb-brutalist-lg">
+        <h2 class="text-brutalist-2xl md:text-brutalist-3xl font-brutalist-black border-b-brutalist border-brutalist-text pb-brutalist-xs inline-block">
+          Episode Reviews
+        </h2>
+      </div>
+      <div>
+        {
+          sortedPosts.map((post) => (
+            <BlogPreview
+              title={post.data.title}
+              date={post.data.date}
+              body={post.body}
+              slug={post.slug}
+              type="mahabharat"
+              tags={post.data.tags}
+            />
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Base>

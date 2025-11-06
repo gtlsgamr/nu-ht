@@ -4,14 +4,25 @@ import Header from "../components/Header.astro";
 const { title, description } = Astro.props;
 ---
 
-<html lang="en" class="bg-[#faf9f7] text-[#2f2f2f]">
+<html lang="en" class="bg-brutalist-bg text-brutalist-text">
 <Head title={title} description={description} />
-<body class="mx-auto">
-<main class="md:w-2/3  mx-auto">
+<body class="font-sans antialiased">
+<main class="min-h-screen">
   <Header />
-  <slot />
-  <footer class="mt-12 border-t border-dashed border-gray-500 text-center text-sm text-gray-600 py-6 font-serif">
-    &copy; {new Date().getFullYear()} Hitarth Thummar &middot; All rights reserved.
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-brutalist-lg">
+    <slot />
+  </div>
+  <footer class="border-t-brutalist-thick border-brutalist-text mt-brutalist-3xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-brutalist-lg">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-brutalist-sm">
+        <div class="font-mono text-brutalist-sm uppercase tracking-wider">
+          &copy; {new Date().getFullYear()} Hitarth Thummar
+        </div>
+        <div class="font-mono text-brutalist-sm text-brutalist-border">
+          All Rights Reserved
+        </div>
+      </div>
+    </div>
   </footer>
 </main>
 </body>
