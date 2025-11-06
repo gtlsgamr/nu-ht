@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BaseBlogPost from "../../layouts/BaseBlogPost.astro";
+import Base from "../../layouts/Base.astro";
 import BlogPreview from "../../components/BlogPreview.astro";
 
 export async function getStaticPaths() {
@@ -35,35 +35,32 @@ const sortedContent = content.sort(
 );
 ---
 
-<BaseBlogPost title={`Tag: ${tag}`}>
-  <div class="border border-dashed border-gray-500 p-4 my-4 mx-4">
-    <h1 class="md:text-5xl title text-3xl article-title mb-10">
-      Posts tagged with "{tag}"
-    </h1>
+<Base title={`Tag: ${tag}`}>
+  <div class="max-w-5xl mx-auto">
+    <!-- Page Header -->
+    <header class="mb-brutalist-2xl border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none">
+        #{tag}
+      </h1>
+      <p class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border uppercase tracking-wider mt-brutalist-xs">
+        {sortedContent.length} {sortedContent.length === 1 ? 'Post' : 'Posts'}
+      </p>
+    </header>
 
-    <div class="prose space-y-10">
-      <ul class="space-y-4">
-        {
-          sortedContent.map((post) => (
-            <BlogPreview
-              title={post.data.title}
-              date={post.data.date}
-              body={post.body}
-              slug={`/${post.type}/${post.slug}`}
-              type={post.type}
-              tags={post.data.tags}
-            />
-          ))
-        }
-      </ul>
+    <!-- Content List -->
+    <div>
+      {
+        sortedContent.map((post) => (
+          <BlogPreview
+            title={post.data.title}
+            date={post.data.date}
+            body={post.body}
+            slug={`/${post.type}/${post.slug}`}
+            type={post.type}
+            tags={post.data.tags}
+          />
+        ))
+      }
     </div>
   </div>
-</BaseBlogPost>
-
-<style>
-  .title {
-    font-family: "Playfair Display", serif;
-    font-weight: 400 !important;
-    font-style: italic;
-  }
-</style>
+</Base>
