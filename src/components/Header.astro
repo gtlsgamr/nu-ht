@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
         <div class="flex items-center gap-4 md:gap-6">
           <div class="relative">
             <Image
-              class="w-16 md:w-24 h-16 md:h-24 object-contain border-brutalist border-brutalist-text transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              class="w-16 md:w-24 h-16 md:h-24 object-contain  transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
               alt="crest"
               src={crest}
             />
@@ -35,13 +35,13 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-brutalist-surface border-t-brutalist border-b-brutalist border-brutalist-text -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+    <nav class="sticky top-0 z-50 bg-brutalist-surface border-t-brutalist border-brutalist-text -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-brutalist-sm">
         <ul class="flex gap-6 md:gap-8 list-none m-0 p-0">
           <li>
             <a
               href="/posts"
-              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-orange hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath.startsWith('/posts') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
+              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-bg hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath.startsWith('/posts') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
             >
               Blog
             </a>
@@ -49,7 +49,7 @@ const currentPath = Astro.url.pathname;
           <li>
             <a
               href="/artwork"
-              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-orange hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath === '/artwork' ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
+              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-bg hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath === '/artwork' ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
             >
               Artwork
             </a>
@@ -57,7 +57,7 @@ const currentPath = Astro.url.pathname;
           <li>
             <a
               href="/poems"
-              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-orange hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 ${currentPath.startsWith('/poems') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
+              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors px-2 py-1 ${currentPath.startsWith('/poems') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
             >
               Poetry
             </a>
