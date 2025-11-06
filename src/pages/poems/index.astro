@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BaseBlogPost from "../../layouts/BaseBlogPost.astro";
+import Base from "../../layouts/Base.astro";
 import BlogPreview from "../../components/BlogPreview.astro";
 
 const pageTitle = "Poems";
@@ -19,18 +19,31 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
 }, {});
 ---
 
-<BaseBlogPost title={pageTitle}>
-  <div class="border border-dashed  border-gray-500 p-4 my-4 mx-4">
-    <h1 class=" md:text-5xl title text-3xl article-title mb-10">Poems</h1>
+<Base title={pageTitle}>
+  <div class="max-w-5xl mx-auto">
+    <!-- Page Header -->
+    <header class="mb-brutalist-2xl border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none">
+        Poems
+      </h1>
+      <p class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border uppercase tracking-wider mt-brutalist-xs">
+        {sortedPosts.length} Poems
+      </p>
+    </header>
 
-    <div class="prose  space-y-10">
+    <!-- Poems by Year -->
+    <div class="space-y-brutalist-2xl">
       {
         Object.entries(postsByYear)
-            .sort((a, b) => b[0] - a[0]) // Descending year order
-          .map(([year, posts]) => (
+            .sort((a, b) => b[0] - a[0])
+            .map(([year, posts]) => (
             <section>
-              <h2 class="text-2xl md:text-3xl font-semibold serifs mb-4">{year}</h2>
-              <ul class="space-y-4">
+              <div class="mb-brutalist-lg">
+                <h2 class="text-brutalist-2xl md:text-brutalist-3xl font-brutalist-black border-b-brutalist border-brutalist-text pb-brutalist-xs inline-block">
+                  {year}
+                </h2>
+              </div>
+              <div>
                 {
                   posts.map(post => (
                       <BlogPreview
@@ -43,22 +56,10 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
                       />
                   ))
                 }
-              </ul>
+              </div>
             </section>
         ))
       }
     </div>
   </div>
-</BaseBlogPost>
-
-<style>
-  .title {
-    font-family: "Playfair Display", serif;
-    font-weight: 400 !important;
-    font-style: italic;
-  }
-  .serifs {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-  }
-</style>
+</Base>

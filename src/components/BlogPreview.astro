@@ -3,37 +3,33 @@ const {title, date, slug, type, tags = []} = Astro.props;
 const options = {
     year: 'numeric', month: 'long', day: 'numeric'
 };
+const formattedDate = new Date(date).toLocaleString('en-US',options);
 ---
-<div>
-    <a  href={slug}><div class="mt-5  text-xl text-bold">{title} </div></a>
-    <div class="date-tags">
-        <span class="date">{new Date(date).toLocaleString('en-US',options)}</span>
-    </div>
-</div>
+<article class="group relative border-brutalist border-brutalist-text p-brutalist-md md:p-brutalist-lg mb-brutalist-lg hover:border-brutalist-orange transition-all">
+  <!-- Offset shadow effect -->
+  <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-2 translate-y-2 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform"></div>
 
-<style>
-  a{
-    text-decoration: none !important;
-  }
-  .date-tags {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-  .date {
-    color: inherit;
-  }
-  .tags-inline {
-    display: inline-flex;
-    gap: 0.5rem;
-  }
-  a.tag {
-    color: black !important;
-    text-decoration: underline !important;
-    font-size: 0.9em;
-  }
-  a.tag:hover {
-    opacity: 0.7;
-  }
-</style>
+  <a href={slug} class="block no-underline">
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-brutalist-sm">
+      <div class="flex-1">
+        <h2 class="text-brutalist-xl md:text-brutalist-2xl font-brutalist-bold leading-tight mb-brutalist-xs group-hover:text-brutalist-orange transition-colors">
+          {title}
+        </h2>
+      </div>
+
+      <div class="font-mono text-brutalist-xs md:text-brutalist-sm text-brutalist-border uppercase tracking-wider md:text-right whitespace-nowrap md:ml-brutalist-md">
+        {formattedDate}
+      </div>
+    </div>
+
+    {tags && tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mt-brutalist-sm">
+        {tags.map((tag: string) => (
+          <span class="font-mono text-brutalist-xs px-2 py-1 border border-brutalist-border text-brutalist-border uppercase tracking-wide group-hover:border-brutalist-orange group-hover:text-brutalist-orange transition-colors">
+            #{tag}
+          </span>
+        ))}
+      </div>
+    )}
+  </a>
+</article>
