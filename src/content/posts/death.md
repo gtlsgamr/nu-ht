@@ -6,7 +6,7 @@ tags: ["philosophy", "reflection", "life", "personal"]
 ---
 I’ve spent years grappling with the idea of death.
 
-What exactly is death? What exactly is death? The mechanical shutdown of the body? Or is it the soul abandoning the
+What exactly is death? The mechanical shutdown of the body? Or is it the soul abandoning the
 mortal coil in search of gentler realms? When are you considered dead? Does it begin when your heart stills—or when
 those you love begin to forget the sound of your laugh? Is it when your memory finally slips from the minds of those you
 once held close?
