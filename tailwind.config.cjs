@@ -9,9 +9,9 @@ module.exports = {
     extend: {
 		colors: {
 			'brutalist': {
-				'bg': '#F8F8F8',
+				'bg': '#FAFAFA',
 				'surface': '#FFFFFF',
-				'text': '#0A0A0A',
+				'text': '#1A1A1A',
 				'border': '#999999',
 				'orange': '#FF6B00',
 			}
@@ -50,18 +50,18 @@ module.exports = {
 		typography:{
 			DEFAULT:{
 				css:{
-					'--tw-prose-body': '#0A0A0A',
-					'--tw-prose-headings': '#0A0A0A',
+					'--tw-prose-body': '#1A1A1A',
+					'--tw-prose-headings': '#1A1A1A',
 					'--tw-prose-links': '#FF6B00',
-					'--tw-prose-bold': '#0A0A0A',
-					'--tw-prose-code': '#0A0A0A',
-					'--tw-prose-pre-bg': '#F8F8F8',
-					'--tw-prose-quotes': '#0A0A0A',
+					'--tw-prose-bold': '#1A1A1A',
+					'--tw-prose-code': '#1A1A1A',
+					'--tw-prose-pre-bg': '#FAFAFA',
+					'--tw-prose-quotes': '#1A1A1A',
 					img:{
 						"margin": "2rem auto",
 						"border": "2px solid #999999",
 					},
-					"color": "#0A0A0A",
+					"color": "#1A1A1A",
 					"font-family": "'Inter', sans-serif",
 					"font-size": "1rem",
 					"line-height": "1.6",
@@ -70,34 +70,35 @@ module.exports = {
 						color: "#FF6B00",
 						"text-decoration": "underline",
 						"font-weight": "500",
+						"transition": "background-color 0.15s ease, color 0.15s ease, text-decoration 0.15s ease",
 						"&:hover": {
 							"background-color": "#FF6B00",
-							"color": "#F8F8F8",
+							"color": "#FAFAFA",
 							"text-decoration": "none",
 						}
 					},
 					h1:{
-						color: "#0A0A0A",
+						color: "#1A1A1A",
 						"font-weight": "900",
 						"line-height": "1.1",
 						"margin-top": "2rem",
 						"margin-bottom": "1rem",
 					},
 					h2:{
-						color: "#0A0A0A",
+						color: "#1A1A1A",
 						"font-weight": "800",
 						"line-height": "1.2",
 						"margin-top": "2rem",
 						"margin-bottom": "1rem",
 					},
 					h3:{
-						color: "#0A0A0A",
+						color: "#1A1A1A",
 						"font-weight": "800",
 						"line-height": "1.2",
 					},
 					code: {
 						"font-family": "'JetBrains Mono', monospace",
-						"background-color": "#F8F8F8",
+						"background-color": "#FAFAFA",
 						"padding": "0.125rem 0.25rem",
 						"border": "1px solid #999999",
 						"border-radius": "0",
@@ -110,14 +111,14 @@ module.exports = {
 						content: '""',
 					},
 					pre: {
-						"background-color": "#F8F8F8",
+						"background-color": "#FAFAFA",
 						"border": "2px solid #999999",
 						"padding": "1rem",
 						"font-family": "'JetBrains Mono', monospace",
 						"border-radius": "0",
 					},
 					blockquote: {
-						"border-left": "4px solid #0A0A0A",
+						"border-left": "4px solid #1A1A1A",
 						"font-style": "normal",
 						"font-weight": "400",
 						"padding-left": "1rem",

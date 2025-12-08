@@ -7,6 +7,13 @@ const { title, description } = Astro.props;
 <html lang="en" class="bg-brutalist-bg text-brutalist-text">
 <Head title={title} description={description} />
 <body class="font-sans antialiased">
+<style is:global>
+  /* Improved focus states for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #FF6B00;
+    outline-offset: 2px;
+  }
+</style>
 <main class="min-h-screen">
   <Header />
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-brutalist-lg">

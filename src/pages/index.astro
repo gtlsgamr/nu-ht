@@ -34,11 +34,11 @@ const recentPosts = allPosts
 
       <ul class="space-y-brutalist-md list-none p-0">
         {recentPosts.map((post, index) => (
-          <li class={`relative border-brutalist border-brutalist-text p-brutalist-md hover:border-brutalist-orange transition-colors ${index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'}`}>
-            <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-2 translate-y-2 -z-10"></div>
+          <li class={`relative border-brutalist border-brutalist-text p-brutalist-md hover:border-brutalist-orange transition-colors duration-150 ease-out ${index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'}`}>
+            <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-2 translate-y-2 -z-10 transition-transform duration-150 ease-out"></div>
             <a href={`/${post.collection}/${post.slug}`} class="block no-underline group">
               <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-                <h3 class="text-brutalist-lg md:text-brutalist-xl font-brutalist-bold group-hover:text-brutalist-orange transition-colors">
+                <h3 class="text-brutalist-lg md:text-brutalist-xl font-brutalist-bold group-hover:text-brutalist-orange transition-colors duration-150 ease-out">
                   {post.data.title}
                 </h3>
                 <span class="font-mono text-brutalist-xs md:text-brutalist-sm text-brutalist-border uppercase tracking-wider whitespace-nowrap">
@@ -62,7 +62,7 @@ const recentPosts = allPosts
           <div class="space-y-brutalist-sm">
             <p class="font-mono text-brutalist-sm md:text-brutalist-base">
               <span class="text-brutalist-border uppercase tracking-wider">Email:</span><br/>
-              <a href="mailto:hittarth91@gmail.com" class="text-brutalist-orange underline hover:bg-brutalist-orange hover:text-brutalist-bg hover:no-underline px-1 transition-colors">
+              <a href="mailto:hittarth91@gmail.com" class="text-brutalist-orange underline hover:bg-brutalist-orange hover:text-brutalist-bg hover:no-underline px-1 transition-colors duration-150 ease-out">
                 hittarth91@gmail.com
               </a>
             </p>
@@ -75,13 +75,13 @@ const recentPosts = allPosts
             Elsewhere
           </h2>
           <div class="flex flex-col gap-brutalist-xs">
-            <a href="https://github.com/gtlsgamr" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 border-brutalist border-brutalist-text inline-block">
+            <a href="https://github.com/gtlsgamr" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 border-brutalist border-brutalist-text inline-block">
               GitHub →
             </a>
-            <a href="https://linkedin.com/in/hitarth-thummar" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 border-brutalist border-brutalist-text inline-block">
+            <a href="https://linkedin.com/in/hitarth-thummar" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 border-brutalist border-brutalist-text inline-block">
               LinkedIn →
             </a>
-            <a href="https://www.instagram.com/hit.ka.arth" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors px-2 py-1 border-brutalist border-brutalist-text inline-block">
+            <a href="https://www.instagram.com/hit.ka.arth" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 border-brutalist border-brutalist-text inline-block">
               Instagram →
             </a>
           </div>
