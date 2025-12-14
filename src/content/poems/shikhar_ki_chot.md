@@ -1,5 +1,5 @@
 ---
-title: "शिखर की चोट पर"
+title: "शिखर"
 description: ''
 date: "2025-12-14"
 tags: []
