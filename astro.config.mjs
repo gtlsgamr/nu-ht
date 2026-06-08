@@ -5,6 +5,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://hitarththummar.xyz",
   integrations: [
     tailwind(),
     mdx({
@@ -13,7 +14,4 @@ export default defineConfig({
       gfm: false,
     }),
   ],
-  experimental: {
-    assets: true,
-  },
 });

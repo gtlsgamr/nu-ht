@@ -1,36 +1,48 @@
 ---
+import "../styles/global.css";
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
-const { title, description } = Astro.props;
+import Clouds from "../components/Clouds.astro";
+import Rain from "../components/Rain.astro";
+const { title, description, image, article = false, date } = Astro.props;
 ---
 
 <html lang="en" class="bg-brutalist-bg text-brutalist-text">
-<Head title={title} description={description} />
+<Head title={title} description={description} image={image} article={article} date={date} />
 <body class="font-sans antialiased">
 <style is:global>
   /* Improved focus states for keyboard navigation */
   :focus-visible {
-    outline: 2px solid #FF6B00;
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
 </style>
-<main class="min-h-screen">
-  <Header />
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-brutalist-lg">
-    <slot />
+
+{/* Rainy-day weather: drifting clouds + falling rain, fixed behind everything.
+    The solid parchment panel sits on top, so rain only shows in the margins. */}
+<Clouds />
+<Rain />
+
+<div class="relative z-10 min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Header />
+    {/* The "paper": one solid parchment panel with a crisp ink border. */}
+    <main class="border-brutalist border-brutalist-text bg-brutalist-surface px-5 py-brutalist-lg md:px-brutalist-xl md:py-brutalist-xl">
+      <slot />
+    </main>
   </div>
-  <footer class="border-t-brutalist-thick border-brutalist-text mt-brutalist-3xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-brutalist-lg">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-brutalist-sm">
-        <div class="font-mono text-brutalist-sm uppercase tracking-wider">
-          &copy; {new Date().getFullYear()} Hitarth Thummar
-        </div>
-        <div class="font-mono text-brutalist-sm text-brutalist-border">
-          All Rights Reserved
-        </div>
-      </div>
-    </div>
+
+  {/* Footer lives on the slate, outside the paper — monospace, old-web style. */}
+  <footer class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-brutalist-lg text-center">
+    <p class="font-mono text-brutalist-sm text-brutalist-text">
+      Copyright &copy; {new Date().getFullYear()} &mdash; Hitarth Thummar
+    </p>
+    <p class="font-mono text-brutalist-sm mt-1">
+      <a href="/atom.xml" class="text-brutalist-text underline underline-offset-2 hover:text-brutalist-orange transition-colors duration-200 ease-out">
+        Subscribe via Atom
+      </a>
+    </p>
   </footer>
-</main>
+</div>
 </body>
 </html>

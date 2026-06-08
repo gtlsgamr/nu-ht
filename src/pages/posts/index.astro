@@ -19,15 +19,15 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
 }, {});
 ---
 
-<Base title={pageTitle}>
-  <div class="max-w-5xl mx-auto">
+<Base title={pageTitle} description="Essays and short posts by Hitarth Thummar — on tech, food, culture, and life in Gujarat." image="/og/pages/blog.png">
+  <div class="max-w-3xl mx-auto">
     <!-- Page Header -->
-    <header class="mb-brutalist-2xl border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg">
-      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none">
-        Blog Posts
+    <header class="mb-brutalist-2xl">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
+        Blog
       </h1>
-      <p class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border uppercase tracking-wider mt-brutalist-xs">
-        {sortedPosts.length} Posts
+      <p class="font-mono text-brutalist-xs text-brutalist-border tracking-wide mt-2">
+        {sortedPosts.length} posts
       </p>
     </header>
 
@@ -38,15 +38,16 @@ const postsByYear = sortedPosts.reduce((acc, post) => {
             .sort((a, b) => b[0] - a[0])
             .map(([year, posts]) => (
             <section>
-              <div class="mb-brutalist-lg">
-                <h2 class="text-brutalist-2xl md:text-brutalist-3xl font-brutalist-black border-b-brutalist border-brutalist-text pb-brutalist-xs inline-block">
+              <div class="mb-brutalist-md flex items-center gap-4">
+                <h2 class="text-brutalist-xl font-display text-brutalist-border">
                   {year}
                 </h2>
+                <span class="flex-1 h-px bg-brutalist-border/30"></span>
               </div>
               <div>
                 {
                   posts.map(post => (
-                      <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="posts" tags={post.data.tags}/>
+                      <BlogPreview title={post.data.title} date={post.data.date} body={post.body} slug={post.slug} type="posts" tags={post.data.tags} description={post.data.description}/>
                   ))
                 }
               </div>

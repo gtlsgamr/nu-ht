@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import data from "../../data.js";
 import { getCollection } from "astro:content";
 
 const poemPosts = await getCollection("poems");
@@ -11,93 +12,75 @@ const recentPosts = allPosts
     .slice(0, 5);
 ---
 
-<Base title="home">
-  <div class="max-w-5xl mx-auto">
-    <!-- Hero Section -->
-    <section class="mb-brutalist-3xl">
-      <div class="relative border-brutalist-thick border-brutalist-text p-brutalist-lg md:p-brutalist-2xl">
-        <div class="absolute inset-0 border-brutalist-thick border-brutalist-text translate-x-3 translate-y-3 -z-10"></div>
+<Base title="home" description="Personal website of Hitarth Thummar — a developer and poet from Gujarat, India. Code, poems, artwork, and reflections." image="/og/pages/home.png">
+  <!-- Intro -->
+  <section>
+    <h2 class="text-brutalist-2xl md:text-brutalist-3xl font-display text-brutalist-text mb-brutalist-sm">
+      I'm <span class="text-brutalist-orange">Hitarth</span>,
+    </h2>
+    <div class="space-y-3 text-brutalist-base md:text-brutalist-lg leading-relaxed text-brutalist-text">
+      <p>A guy from Gujarat, India. Welcome to my personal webspace.</p>
+      <p>
+        This is a place where I share everything I find interesting, amusing,
+        or worth keeping: code, poems, and reflections on things that matter
+        to me.
+      </p>
+    </div>
+  </section>
 
-        <p class="text-brutalist-lg md:text-brutalist-xl font-brutalist-normal leading-relaxed max-w-3xl">
-          I'm <span class="font-brutalist-bold text-brutalist-orange">Hitarth</span> — a guy from Gujarat, India. I write code, poems, and reflections on things that matter to me. This is my space to share them.
-        </p>
-      </div>
-    </section>
-
-    <!-- Recent Posts Section -->
-    <section class="mb-brutalist-3xl">
-      <div class="border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg mb-brutalist-lg">
-        <h2 class="text-brutalist-2xl md:text-brutalist-3xl font-brutalist-black uppercase">
-          Recent Posts
-        </h2>
-      </div>
-
-      <ul class="space-y-brutalist-md list-none p-0">
-        {recentPosts.map((post, index) => (
-          <li class={`relative border-brutalist border-brutalist-text p-brutalist-md hover:border-brutalist-orange transition-colors duration-150 ease-out ${index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'}`}>
-            <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-2 translate-y-2 -z-10 transition-transform duration-150 ease-out"></div>
-            <a href={`/${post.collection}/${post.slug}`} class="block no-underline group">
-              <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-                <h3 class="text-brutalist-lg md:text-brutalist-xl font-brutalist-bold group-hover:text-brutalist-orange transition-colors duration-150 ease-out">
-                  {post.data.title}
-                </h3>
-                <span class="font-mono text-brutalist-xs md:text-brutalist-sm text-brutalist-border uppercase tracking-wider whitespace-nowrap">
-                  {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                </span>
-              </div>
-            </a>
-          </li>
+  <!-- Contact -->
+  <section class="mt-brutalist-xl">
+    <h3 class="text-brutalist-xl font-display text-brutalist-text mb-brutalist-sm">Contact</h3>
+    <ul class="list-[square] pl-5 space-y-1 text-brutalist-base text-brutalist-text">
+      <li>
+        Email:
+        <a href={`mailto:${data.email}`} class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out break-all">
+          {data.email}
+        </a>
+      </li>
+      <li>
+        {data.social.map((s, i) => (
+          <>
+            {i > 0 && <span class="text-brutalist-border">, </span>}
+            <a href={s.href} class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">{s.label}</a>
+          </>
         ))}
-      </ul>
-    </section>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Contact & Links Section -->
-    <section class="mb-brutalist-3xl">
-      <div class="grid md:grid-cols-2 gap-brutalist-lg">
-        <!-- Contact Card -->
-        <div class="border-brutalist border-brutalist-text p-brutalist-lg bg-brutalist-surface">
-          <h2 class="text-brutalist-xl md:text-brutalist-2xl font-brutalist-black uppercase mb-brutalist-md">
-            Get in Touch
-          </h2>
-          <div class="space-y-brutalist-sm">
-            <p class="font-mono text-brutalist-sm md:text-brutalist-base">
-              <span class="text-brutalist-border uppercase tracking-wider">Email:</span><br/>
-              <a href="mailto:hittarth91@gmail.com" class="text-brutalist-orange underline hover:bg-brutalist-orange hover:text-brutalist-bg hover:no-underline px-1 transition-colors duration-150 ease-out">
-                hittarth91@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
+  <!-- Quote box -->
+  <section class="mt-brutalist-xl">
+    <blockquote class="border-brutalist border-brutalist-text bg-brutalist-text/[0.06] px-brutalist-md py-brutalist-md">
+      <p class="text-brutalist-lg md:text-brutalist-xl font-display italic leading-snug text-brutalist-text">
+        The butterfly counts not months but moments, and has time enough.
+      </p>
+    </blockquote>
+  </section>
 
-        <!-- Social Links Card -->
-        <div class="border-brutalist border-brutalist-text p-brutalist-lg bg-brutalist-surface">
-          <h2 class="text-brutalist-xl md:text-brutalist-2xl font-brutalist-black uppercase mb-brutalist-md">
-            Elsewhere
-          </h2>
-          <div class="flex flex-col gap-brutalist-xs">
-            <a href="https://github.com/gtlsgamr" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 border-brutalist border-brutalist-text inline-block">
-              GitHub →
-            </a>
-            <a href="https://linkedin.com/in/hitarth-thummar" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 border-brutalist border-brutalist-text inline-block">
-              LinkedIn →
-            </a>
-            <a href="https://www.instagram.com/hit.ka.arth" class="font-brutalist-bold text-brutalist-base uppercase tracking-wide text-brutalist-text hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 border-brutalist border-brutalist-text inline-block">
-              Instagram →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section>
-      <div class="relative border-t-brutalist-thick border-b-brutalist-thick border-brutalist-text py-brutalist-xl px-brutalist-lg bg-brutalist-surface">
-        <blockquote class="text-brutalist-xl md:text-brutalist-2xl font-brutalist-medium leading-tight max-w-3xl">
-          <span class="text-brutalist-orange font-brutalist-black text-brutalist-4xl">"</span>
-          The butterfly counts not months but moments, and has time enough.
-          <span class="text-brutalist-orange font-brutalist-black text-brutalist-4xl">"</span>
-        </blockquote>
-      </div>
-    </section>
-  </div>
+  <!-- Recent Posts -->
+  <section class="mt-brutalist-xl pt-brutalist-md border-t-brutalist border-brutalist-text">
+    <h3 class="text-brutalist-xl font-display text-brutalist-text mb-brutalist-xs">Recent Posts</h3>
+    <ul class="list-none p-0 m-0">
+      {recentPosts.map((post) => (
+        <li class="py-3 border-b border-brutalist-text last:border-b-0">
+          <a href={`/${post.collection}/${post.slug}`} class="group block no-underline">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-0.5 md:gap-4">
+              <span class="text-brutalist-base md:text-brutalist-lg font-display text-brutalist-text group-hover:text-brutalist-orange group-hover:underline underline-offset-4 transition-colors duration-200 ease-out">
+                {post.data.title}
+              </span>
+              <span class="font-mono text-brutalist-xs text-brutalist-border whitespace-nowrap tracking-wide">
+                {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </span>
+            </div>
+            {post.data.description?.trim() && (
+              <p class="text-brutalist-sm text-brutalist-text/75 leading-snug mt-1 max-w-2xl">
+                {post.data.description}
+              </p>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
 </Base>

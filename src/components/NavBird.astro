@@ -1,0 +1,67 @@
+---
+/*
+  A little bird perched on the navbar.
+  - Idle: a slow breathing bob.
+  - Hover: a quick hop + a couple of wing flaps.
+  Drawn with currentColor so it matches the theme ink; beak uses the accent.
+  Positioned absolutely — its parent (the <nav>) is `relative`.
+*/
+---
+<span class="nav-bird" title="hello">
+  <svg viewBox="0 0 64 64" width="42" height="42" fill="none" aria-hidden="true">
+    <g class="bird">
+      <!-- tail -->
+      <path d="M21 35 L4 28 L19 43 Z" fill="currentColor" />
+      <!-- body -->
+      <ellipse cx="33" cy="35" rx="15" ry="12" fill="currentColor" />
+      <!-- head -->
+      <circle cx="46" cy="24" r="8.5" fill="currentColor" />
+      <!-- beak -->
+      <path d="M53 22 L62 25 L53 27 Z" fill="var(--color-accent)" />
+      <!-- eye -->
+      <circle cx="48" cy="22.5" r="1.6" fill="var(--color-surface)" />
+      <!-- wing -->
+      <path class="wing" d="M24 31 Q34 26 43 34 Q33 39 24 37 Z" fill="var(--color-surface)" opacity="0.40" />
+      <!-- legs -->
+      <line x1="30" y1="46" x2="29" y2="54" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+      <line x1="37" y1="46" x2="38" y2="54" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    </g>
+  </svg>
+</span>
+
+<style>
+  /* Perched ON the nav's top line: the SVG's feet sit ~84% down its 42px
+     box (~35px), so top:-2.2rem lands them exactly on the border. Offset
+     left of the RSS button so it sits on the bar, not over the button. */
+  .nav-bird {
+    position: absolute;
+    right: 4.5rem;
+    top: -2.2rem;
+    line-height: 0;
+    color: var(--color-ink);
+    z-index: 60;
+  }
+  .nav-bird svg { display: block; overflow: visible; }
+  .bird {
+    transform-origin: 50% 90%;
+    animation: bird-bob 3.4s ease-in-out infinite;
+  }
+  .wing { transform-origin: 30px 33px; }
+
+  .nav-bird:hover .bird { animation: bird-hop 0.55s ease; }
+  .nav-bird:hover .wing { animation: wing-flap 0.28s ease-in-out 2; }
+
+  @keyframes bird-bob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(-1.5px) rotate(-2deg); }
+  }
+  @keyframes bird-hop {
+    0%   { transform: translateY(0); }
+    35%  { transform: translateY(-8px) rotate(-4deg); }
+    70%  { transform: translateY(0); }
+  }
+  @keyframes wing-flap {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(-34deg); }
+  }
+</style>

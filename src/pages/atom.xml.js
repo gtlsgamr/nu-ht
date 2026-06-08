@@ -6,9 +6,14 @@ const poemPosts = await getCollection("poems");
 const blogPosts = await getCollection("posts");
 // const reviewPosts = await getCollection("mahabharat");
 const allPosts = [...poemPosts, ...blogPosts];
-const sortedPosts = allPosts.sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-);
+const sortedPosts = allPosts.sort((a, b) => {
+  const byDate = new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  if (byDate !== 0) return byDate;
+  // Stable tiebreaker for same-date entries so the feed order is deterministic
+  // across builds/Astro versions (otherwise file-iteration order can reshuffle
+  // entries and produce confusing — though harmless — feed diffs).
+  return `${a.collection}/${a.slug}`.localeCompare(`${b.collection}/${b.slug}`);
+});
 
 
 function convertToRFC3339(dateString) {
@@ -22,7 +27,7 @@ function convertToRFC3339(dateString) {
   return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 }
 
-export async function get(context) {
+export async function GET(context) {
   const xmlEntries = sortedPosts.map((post) => {
     return `
       <entry>
@@ -35,8 +40,7 @@ export async function get(context) {
     `;
   });
 
-  return {
-    body: `<?xml version="1.0" encoding="utf-8"?>
+  const body = `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ht.xyz</title>
 <id>https://hitarththummar.xyz/feed.xml</id>
@@ -48,8 +52,11 @@ export async function get(context) {
 <name>Hitarth Thummar</name>
 <email>hittarth91@gmail.com</email>
 </author>
-${xmlEntries}
+${xmlEntries.join("")}
 </feed>
-    `,
-  };
+`;
+
+  return new Response(body, {
+    headers: { "Content-Type": "application/xml; charset=utf-8" },
+  });
 }

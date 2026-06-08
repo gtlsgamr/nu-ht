@@ -1,28 +1,57 @@
 ---
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  image,        // page-specific card (absolute path); falls back to /og.webp
+  article = false,
+  date,
+} = Astro.props;
+
+const SITE = Astro.site ?? new URL("https://hitarththummar.xyz");
+const SITE_NAME = "Hitarth Thummar";
+const DEFAULT_DESC =
+  "Personal website and blog of Hitarth Thummar — code, poems, artwork, and reflections from Gujarat, India.";
+
+const desc = description ?? DEFAULT_DESC;
+const canonical = new URL(Astro.url.pathname, SITE).href;
+const ogImage = new URL(image ?? "/og.webp", SITE).href;
+const publishedISO = article && date ? new Date(date).toISOString() : null;
 ---
 
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Add viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- SEO stuff -->
-  <meta name="description" content="Hitarth Thummar's Personal website and blog" /> <!-- Add a concise description of your website -->
-  <meta name="keywords" content="blog, personal, indie, smallweb, india, indian" /> <!-- Add relevant keywords related to your website's content -->
-  <meta name="author" content="Hitarth Thummar" /> <!-- Add the author's name -->
-  <meta name="robots" content="index, follow" /> <!-- Specify how search engines should crawl your site -->
-
-  <!-- Social media sharing links -->
-  <meta property="og:title" content={title}/> <!-- Open Graph title for Facebook and other social media platforms -->
-  <meta property="og:description" content={description} /> <!-- Open Graph description for Facebook -->
-  <meta property="og:image" content="/og.webp" /> <!-- Open Graph image for sharing on social media -->
-  <meta property="og:url" content="https://hitarththummar.xyz" /> <!-- Open Graph URL of the webpage -->
-  <!-- Preconnect to fonts.googleapis.com -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-<!-- Asynchronously load font stylesheet using JavaScript -->
+  <!-- Primary SEO -->
   <title>{title} - ht.xyz</title>
+  <meta name="description" content={desc} />
+  <meta name="keywords" content="blog, personal, indie, smallweb, india, indian, poetry, artwork" />
+  <meta name="author" content={SITE_NAME} />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content={article ? "article" : "website"} />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  {publishedISO && <meta property="article:published_time" content={publishedISO} />}
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={desc} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>

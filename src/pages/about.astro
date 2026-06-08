@@ -1,0 +1,64 @@
+---
+import Base from "../layouts/Base.astro";
+import data from "../../data.js";
+---
+
+<Base
+  title="about"
+  description="About Hitarth Thummar — a developer, poet, and sometime artist from Gujarat, India, writing on the small web."
+  image="/og/pages/about.png"
+>
+  <article class="max-w-2xl">
+    <header class="mb-brutalist-lg">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
+        About
+      </h1>
+    </header>
+
+    <div class="space-y-brutalist-sm text-brutalist-base md:text-brutalist-lg leading-relaxed text-brutalist-text">
+      <p>
+        I am <span class="text-brutalist-orange">Hitarth Thummar,</span> a developer,
+        poet, and barely an artist from Gujarat, India. I write code most of the time.
+        Sometimes when I feel really blue, I write poems and short reflections on whatever happens
+        to be on my mind.
+      </p>
+      <p>
+        This is my corner of the small web. My space (not myspace). I
+        keep it deliberately quiet and hand-made: somewhere to publish the things
+        I find interesting, amusing, or worth keeping, without an algorithm
+        deciding who sees them.
+      </p>
+      <p>
+        You'll find my <a href="/posts" class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">blog</a>,
+        a growing collection of <a href="/poems" class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">poetry</a>,
+        the <a href="/artwork" class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">artwork</a>
+        I made back in college in photoshop, and an
+        episode-by-episode <a href="/mahabharat" class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">companion guide</a>
+        for the 1988 <em>Mahabharat</em> TV series.
+      </p>
+    </div>
+
+    <section class="mt-brutalist-xl pt-brutalist-md border-t-brutalist border-brutalist-text">
+      <h2 class="text-brutalist-xl font-display text-brutalist-text mb-brutalist-sm">Get in touch</h2>
+      <ul class="list-[square] pl-5 space-y-1 text-brutalist-base text-brutalist-text">
+        <li>
+          Email:
+          <a href={`mailto:${data.email}`} class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out break-all">
+            {data.email}
+          </a>
+        </li>
+        <li>
+          {data.social.map((s, i) => (
+            <>
+              {i > 0 && <span class="text-brutalist-border">, </span>}
+              <a href={s.href} class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">{s.label}</a>
+            </>
+          ))}
+        </li>
+        <li>
+          <a href="/atom.xml" class="text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out">Subscribe via Atom</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</Base>

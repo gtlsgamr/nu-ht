@@ -1,74 +1,58 @@
 ---
 import data from "../../data.js";
-import { Icon } from 'astro-icon'
-import crest from '../assets/crest.png';
-import { Image } from 'astro:assets';
+import NavBird from "./NavBird.astro";
 
 const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: "/posts", label: "blog", match: (p) => p.startsWith("/posts") },
+  { href: "/poems", label: "poems", match: (p) => p.startsWith("/poems") },
+  { href: "/artwork", label: "artwork", match: (p) => p === "/artwork" },
+  { href: "/mahabharat", label: "mahabharat", match: (p) => p.startsWith("/mahabharat") },
+  { href: "/about", label: "about", match: (p) => p === "/about" },
+];
 ---
 
-<header class="border-b-brutalist-thick border-brutalist-text bg-brutalist-surface">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Logo/Title Section -->
-    <div class="py-brutalist-lg md:py-brutalist-xl">
-      <a href="/" class="group block">
-        <div class="flex items-center gap-4 md:gap-6">
-          <div class="relative">
-            <Image
-              class="w-16 md:w-24 h-16 md:h-24 object-contain transition-transform duration-150 ease-out group-hover:translate-x-1 group-hover:-translate-y-1"
-              alt="crest"
-              src={crest}
-            />
-            <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-1 -translate-y-1 -z-10 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-150 ease-out"></div>
-          </div>
-          <div>
-            <h1 class="text-brutalist-3xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none tracking-tight">
-              <span class="hidden md:inline">{data.siteTitle}</span>
-              <span class="md:hidden">{data.siteMobileTitle}</span>
-            </h1>
+<header class="pt-brutalist-lg md:pt-brutalist-xl pb-brutalist-md">
+  <!-- Masthead -->
+  <a href="/" class="group block no-underline">
+    <h1 class="text-brutalist-3xl md:text-brutalist-5xl font-display font-medium leading-none tracking-tight text-brutalist-text group-hover:text-brutalist-orange transition-colors duration-200 ease-out">
+      <span class="hidden md:inline">{data.siteTitle}</span>
+      <span class="md:hidden">{data.siteMobileTitle}</span>
+    </h1>
+    <p class="font-mono text-brutalist-xs text-brutalist-border mt-2 tracking-wide">
+      {data.subTitle}
+    </p>
+  </a>
 
-          </div>
-        </div>
+  <!-- Navigation: a thin ink rule (the bird perches on it). Not sticky. -->
+  <nav class="relative border-t-brutalist border-brutalist-text mt-brutalist-md">
+    <NavBird />
+    <div class="flex items-center justify-between pt-brutalist-sm">
+      <ul class="flex flex-wrap gap-x-4 gap-y-1 md:gap-x-6 list-none m-0 p-0">
+        {links.map((link) => {
+          const active = link.match(currentPath);
+          return (
+            <li>
+              <a
+                href={link.href}
+                class={`font-display text-brutalist-lg md:text-brutalist-xl tracking-tight transition-colors duration-200 ease-out ${active ? 'text-brutalist-orange underline underline-offset-4 decoration-2' : 'text-brutalist-text hover:text-brutalist-orange'}`}
+              >
+                {link.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <a
+        href="/atom.xml"
+        class="p-1 text-brutalist-text hover:text-brutalist-orange transition-colors duration-200 ease-out"
+        aria-label="RSS Feed"
+      >
+        <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.18 15.64a2.18 2.18 0 1 1 0 4.36 2.18 2.18 0 0 1 0-4.36zM4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+        </svg>
       </a>
     </div>
-
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-brutalist-surface border-t-brutalist border-brutalist-text -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between py-brutalist-sm">
-        <ul class="flex gap-6 md:gap-8 list-none m-0 p-0">
-          <li>
-            <a
-              href="/posts"
-              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 ${currentPath.startsWith('/posts') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
-            >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="/artwork"
-              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 ${currentPath === '/artwork' ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
-            >
-              Artwork
-            </a>
-          </li>
-          <li>
-            <a
-              href="/poems"
-              class={`font-brutalist-bold text-brutalist-base md:text-brutalist-lg uppercase tracking-wide hover:text-brutalist-bg hover:bg-brutalist-orange transition-colors duration-150 ease-out px-2 py-1 ${currentPath.startsWith('/poems') ? 'text-brutalist-orange border-b-2 border-brutalist-orange' : ''}`}
-            >
-              Poetry
-            </a>
-          </li>
-        </ul>
-        <a
-          href="/atom.xml"
-          class="p-2 hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors duration-150 ease-out border-brutalist border-brutalist-text"
-          aria-label="RSS Feed"
-        >
-          <Icon class="w-5 h-5 md:w-6 md:h-6" name="mdi:rss"/>
-        </a>
-      </div>
-    </nav>
-  </div>
+  </nav>
 </header>

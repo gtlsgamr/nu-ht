@@ -1,35 +1,26 @@
 ---
-const {title, date, slug, type, tags = []} = Astro.props;
+const {title, date, slug, type, tags = [], description = ''} = Astro.props;
 const options = {
     year: 'numeric', month: 'long', day: 'numeric'
 };
 const formattedDate = new Date(date).toLocaleString('en-US',options);
+const excerpt = (description ?? '').trim();
 ---
-<article class="group relative border-brutalist border-brutalist-text p-brutalist-md md:p-brutalist-lg mb-brutalist-lg hover:border-brutalist-orange transition-colors duration-150 ease-out">
-  <!-- Offset shadow effect -->
-  <div class="absolute inset-0 border-brutalist border-brutalist-text translate-x-2 translate-y-2 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-150 ease-out"></div>
-
+<article class="group py-brutalist-sm border-b border-brutalist-text">
   <a href={slug} class="block no-underline">
-    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-brutalist-sm">
-      <div class="flex-1">
-        <h2 class="text-brutalist-xl md:text-brutalist-2xl font-brutalist-bold leading-tight mb-brutalist-xs group-hover:text-brutalist-orange transition-colors duration-150 ease-out">
-          {title}
-        </h2>
-      </div>
-
-      <div class="font-mono text-brutalist-xs md:text-brutalist-sm text-brutalist-border uppercase tracking-wider md:text-right whitespace-nowrap md:ml-brutalist-md">
+    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-4">
+      <h2 class="text-brutalist-lg md:text-brutalist-xl font-display text-brutalist-text group-hover:text-brutalist-orange group-hover:underline underline-offset-4 transition-colors duration-200 ease-out">
+        {title}
+      </h2>
+      <time class="font-mono text-brutalist-xs text-brutalist-border whitespace-nowrap tracking-wide">
         {formattedDate}
-      </div>
+      </time>
     </div>
 
-    {tags && tags.length > 0 && (
-      <div class="flex flex-wrap gap-2 mt-brutalist-sm">
-        {tags.map((tag: string) => (
-          <span class="font-mono text-brutalist-xs px-2 py-1 border border-brutalist-border text-brutalist-border uppercase tracking-wide group-hover:border-brutalist-orange group-hover:text-brutalist-orange transition-colors duration-150 ease-out">
-            #{tag}
-          </span>
-        ))}
-      </div>
+    {excerpt && (
+      <p class="text-brutalist-base text-brutalist-text/80 leading-snug mt-1 max-w-2xl">
+        {excerpt}
+      </p>
     )}
   </a>
 </article>

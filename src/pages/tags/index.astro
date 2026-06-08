@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+const collections = await Promise.all([
+  getCollection("posts"),
+  getCollection("poems"),
+  getCollection("mahabharat"),
+]);
+const all = collections.flat();
+
+const counts: Record<string, number> = {};
+for (const entry of all) {
+  for (const tag of entry.data.tags ?? []) {
+    counts[tag] = (counts[tag] ?? 0) + 1;
+  }
+}
+
+// Most-used first, then alphabetical.
+const tags = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+---
+
+<Base title="tags" description="Browse Hitarth Thummar's posts, poems, and reviews by tag." image="/og/pages/tags.png">
+  <header class="mb-brutalist-lg">
+    <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
+      Tags
+    </h1>
+    <p class="font-mono text-brutalist-xs text-brutalist-border tracking-wide mt-2">
+      {tags.length} tags
+    </p>
+  </header>
+
+  <div class="flex flex-wrap gap-2">
+    {tags.map(([tag, count]) => (
+      <a
+        href={`/tags/${tag}`}
+        class="group inline-flex items-baseline gap-1.5 border border-brutalist-text px-3 py-1 font-mono text-brutalist-sm text-brutalist-text no-underline hover:border-brutalist-orange hover:text-brutalist-orange transition-colors duration-200 ease-out"
+      >
+        <span>#{tag}</span>
+        <span class="text-brutalist-border group-hover:text-brutalist-orange transition-colors duration-200 ease-out">{count}</span>
+      </a>
+    ))}
+  </div>
+</Base>

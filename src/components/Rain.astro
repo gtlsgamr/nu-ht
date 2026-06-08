@@ -1,0 +1,85 @@
+---
+/*
+  Falling rain — individual, randomized streaks generated at BUILD TIME.
+
+  The old version used a repeating-linear-gradient, which paints perfectly
+  even, parallel lines → it reads as "scan lines", not rain. Real rain is
+  scattered: every drop has its own column, length, speed, head-start and
+  brightness. So here each drop is its own <span> with randomized inline
+  styles, split across two depth layers (a faint/slow/blurred FAR layer and
+  a brighter/faster NEAR layer). Pure CSS animation afterwards — no client JS.
+
+  TUNE: drop counts in `far`/`near` below, the speed ranges (minDur/maxDur),
+  SLANT (lean angle), and the rgba lightness in `.drop`'s gradient.
+*/
+const SLANT = 8; // degrees the whole rain field leans
+
+function rand(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function makeDrops(count, o) {
+  return Array.from({ length: count }, () => {
+    const dur = rand(o.minDur, o.maxDur);
+    return {
+      left: rand(-4, 104),                // column, with a little overscan
+      len: rand(o.minLen, o.maxLen),      // streak length (px)
+      width: o.width,
+      dur,                                // fall time (s) → controls speed
+      delay: -rand(0, dur),               // negative → already mid-fall at load
+      opacity: rand(o.minOpacity, o.maxOpacity),
+    };
+  });
+}
+
+// Far layer: many thin, slow, dim drops. Near layer: fewer, longer, fast, bright.
+const far = makeDrops(80, { minLen: 26, maxLen: 52, width: 1, minDur: 1.0, maxDur: 1.7, minOpacity: 0.08, maxOpacity: 0.2 });
+const near = makeDrops(48, { minLen: 55, maxLen: 110, width: 1.4, minDur: 0.5, maxDur: 0.9, minOpacity: 0.2, maxOpacity: 0.4 });
+---
+<div class="rain" aria-hidden="true" style={`--slant:${SLANT}deg`}>
+  <div class="rain-layer rain-far">
+    {far.map((d) => (
+      <span class="drop" style={`left:${d.left}%;height:${d.len}px;width:${d.width}px;animation-duration:${d.dur}s;animation-delay:${d.delay}s;opacity:${d.opacity}`}></span>
+    ))}
+  </div>
+  <div class="rain-layer rain-near">
+    {near.map((d) => (
+      <span class="drop" style={`left:${d.left}%;height:${d.len}px;width:${d.width}px;animation-duration:${d.dur}s;animation-delay:${d.delay}s;opacity:${d.opacity}`}></span>
+    ))}
+  </div>
+</div>
+
+<style>
+  .rain {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    /* Lean the whole field, and scale up so the rotated corners stay covered. */
+    transform: rotate(var(--slant)) scale(1.18);
+    transform-origin: 50% 50%;
+  }
+  .rain-layer { position: absolute; inset: 0; }
+  .rain-far { filter: blur(0.6px); }
+
+  .drop {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(226, 235, 243, 0) 0%, rgba(226, 235, 243, 0.95) 100%);
+    border-radius: 999px;
+    will-change: transform;
+    animation-name: rain-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rain-fall {
+    from { transform: translateY(-25vh); }
+    to   { transform: translateY(125vh); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .drop { animation: none; opacity: 0.12 !important; }
+  }
+</style>

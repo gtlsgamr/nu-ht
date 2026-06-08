@@ -35,15 +35,16 @@ const sortedContent = content.sort(
 );
 ---
 
-<Base title={`Tag: ${tag}`}>
-  <div class="max-w-5xl mx-auto">
+<Base title={`Tag: ${tag}`} description={`Posts, poems, and reviews tagged #${tag} on Hitarth Thummar's site.`}>
+  <div class="max-w-3xl mx-auto">
     <!-- Page Header -->
-    <header class="mb-brutalist-2xl border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg">
-      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none">
+    <header class="mb-brutalist-2xl">
+      <a href="/tags" class="font-mono text-brutalist-xs text-brutalist-border tracking-wide mb-1 inline-block no-underline hover:text-brutalist-orange transition-colors duration-200 ease-out">← all tags</a>
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
         #{tag}
       </h1>
-      <p class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border uppercase tracking-wider mt-brutalist-xs">
-        {sortedContent.length} {sortedContent.length === 1 ? 'Post' : 'Posts'}
+      <p class="font-mono text-brutalist-xs text-brutalist-border tracking-wide mt-2">
+        {sortedContent.length} {sortedContent.length === 1 ? 'post' : 'posts'}
       </p>
     </header>
 
@@ -58,6 +59,7 @@ const sortedContent = content.sort(
             slug={`/${post.type}/${post.slug}`}
             type={post.type}
             tags={post.data.tags}
+            description={post.data.description}
           />
         ))
       }

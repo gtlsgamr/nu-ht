@@ -8,6 +8,9 @@ const postsCollection = defineCollection({
       date: z.string(),
       description: z.string(),
       tags: z.array(z.string()).default([]),
+      // Optional custom social-card image. If omitted, one is generated
+      // automatically at /og/<collection>/<slug>.png (see src/pages/og/).
+      image: z.string().optional(),
     })
 });
 
@@ -18,6 +21,7 @@ const mahabharatCollection = defineCollection({
     date: z.string(),
     description: z.string(),
     tags: z.array(z.string()).default([]),
+    image: z.string().optional(),
   })
 });
 
@@ -28,6 +32,7 @@ const poemsCollection = defineCollection({
     date: z.string(),
     description: z.string(),
     tags: z.array(z.string()).default([]),
+    image: z.string().optional(),
   })
 });
 

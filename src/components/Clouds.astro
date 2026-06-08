@@ -1,0 +1,46 @@
+---
+/*
+  Drifting clouds — a soft, blurred parallax layer behind everything.
+  Edit the inline --vars on each .cloud to move / resize / re-time them.
+  Sits at z-index 0 (behind page content), never catches clicks.
+*/
+const clouds = [
+  { top: "6%",  size: 360, dur: 95,  delay: -8,  o: 0.55 },
+  { top: "16%", size: 240, dur: 130, delay: -55, o: 0.40 },
+  { top: "30%", size: 420, dur: 150, delay: -20, o: 0.35 },
+  { top: "48%", size: 280, dur: 115, delay: -80, o: 0.30 },
+  { top: "64%", size: 360, dur: 170, delay: -40, o: 0.25 },
+  { top: "80%", size: 240, dur: 140, delay: -110, o: 0.22 },
+];
+---
+<div class="clouds" aria-hidden="true">
+  {clouds.map((c) => (
+    <span
+      class="cloud"
+      style={`top:${c.top}; width:${c.size}px; height:${Math.round(c.size * 0.5)}px; --dur:${c.dur}s; --delay:${c.delay}s; opacity:${c.o};`}
+    ></span>
+  ))}
+</div>
+
+<style>
+  .clouds {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .cloud {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    background: radial-gradient(60% 60% at 50% 50%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 70%);
+    filter: blur(22px);
+    animation: drift var(--dur, 120s) linear var(--delay, 0s) infinite;
+    will-change: transform;
+  }
+  @keyframes drift {
+    from { transform: translateX(-40vw); }
+    to   { transform: translateX(140vw); }
+  }
+</style>

@@ -1,0 +1,69 @@
+/* =====================================================================
+   GLOBAL DESIGN TOKENS  —  "rainy day"
+   ---------------------------------------------------------------------
+   This is the ONE place to re-theme the whole site. Change a value here
+   and it flows everywhere (Tailwind classes like `bg-brutalist-bg`,
+   `text-brutalist-orange`, the article/prose styles, focus rings, the
+   weather layers, etc. all read from these variables).
+   ===================================================================== */
+
+:root {
+  /* ---- Colors -------------------------------------------------------
+     bg      = base sky / page background
+     surface = cards / raised panels (pale cloud)
+     ink     = main text & borders (wet slate)
+     border  = muted hairlines / secondary text (mist)
+     accent  = the single highlight color (the sad blue)
+  ------------------------------------------------------------------- */
+  --color-bg:      #C3CDD6;  /* overcast sky — the slate the paper sits on */
+  --color-surface: #EAE1CC;  /* parchment — solid old-paper panels */
+  --color-ink:     #23282F;  /* near-black ink — crisp borders & text */
+  --color-border:  #847C6E;  /* faded pencil — muted meta text & hairlines */
+  --color-accent:  #5B7C99;  /* the sad blue */
+
+  /* The sky itself (used as the page background). Tweak the stops to
+     change the weather — heavier/greyer at the top, lighter near the
+     horizon at the bottom. */
+  --sky: linear-gradient(180deg, #9FB0C0 0%, #B6C2CC 45%, #CAD3DB 100%);
+
+  /* ---- Fonts --------------------------------------------------------
+     display = the editorial voice (Fraunces) — headings, wordmark, nav,
+               titles. A high-contrast "old style" serif with soft, slightly
+               wonky letterforms; warm and literary, not a system default.
+     sans    = the reading face (Newsreader, a warm serif) + a Devanagari
+               fallback so the Hindi/Gujarati titles render properly.
+     mono    = code + small captions/meta.
+  ------------------------------------------------------------------- */
+  --font-display: 'Fraunces', Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans: 'Newsreader', 'Tiro Devanagari Hindi', Georgia, Cambria, serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+}
+
+/* ---- The sky ------------------------------------------------------- */
+html { background-color: var(--color-bg); }
+
+body {
+  background: var(--sky) fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings default to the editorial serif. Fraunces is variable, so let it
+   pick optical sizing automatically and carry a touch of weight. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+/* Slightly more comfortable reading rhythm for the serif body. */
+.prose { line-height: 1.75; }
+
+/* Respect people who don't want motion: freeze the weather + bird. */
+@media (prefers-reduced-motion: reduce) {
+  .rain, .cloud, .nav-bird, .nav-bird * {
+    animation: none !important;
+  }
+}

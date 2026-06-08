@@ -1,21 +1,22 @@
 ---
 import Base from "./Base.astro";
-const {title, description, date} = Astro.props;
+import data from "../../data.js";
+const {title, description, date, image} = Astro.props;
 
 const options = {
     year: 'numeric', month: 'long', day: 'numeric'
 };
 const formattedDate = date ? new Date(date).toLocaleString('en-US', options) : '';
 ---
-<Base title={title} description={description}>
-    <article class="max-w-4xl mx-auto">
+<Base title={title} description={description} image={image} article={true} date={date}>
+    <article class="max-w-3xl mx-auto">
         <!-- Title Section -->
-        <header class="mb-brutalist-xl border-b-brutalist-thick border-brutalist-text pb-brutalist-lg">
-            <h1 class="text-brutalist-3xl md:text-brutalist-5xl font-brutalist-black leading-none mb-brutalist-md">
+        <header class="mb-brutalist-xl pb-brutalist-lg border-b border-brutalist-border">
+            <h1 class="text-brutalist-3xl md:text-brutalist-4xl font-display font-medium leading-tight mb-brutalist-sm text-brutalist-text">
                 {title}
             </h1>
             {formattedDate && (
-                <div class="font-mono text-brutalist-sm md:text-brutalist-base text-brutalist-border uppercase tracking-wider">
+                <div class="font-mono text-brutalist-sm text-brutalist-border tracking-wide">
                     {formattedDate}
                 </div>
             )}
@@ -27,14 +28,14 @@ const formattedDate = date ? new Date(date).toLocaleString('en-US', options) : '
         </div>
 
         <!-- Reply Section -->
-        <footer class="border-t-brutalist border-brutalist-text pt-brutalist-lg mt-brutalist-2xl">
-            <div class="font-mono text-brutalist-sm md:text-brutalist-base">
-                <span class="text-brutalist-border uppercase tracking-wider">Reply via email:</span>
+        <footer class="border-t border-brutalist-border/40 pt-brutalist-lg mt-brutalist-2xl">
+            <div class="font-mono text-brutalist-sm">
+                <span class="text-brutalist-border">Reply via email</span>
                 <a
-                    href={`mailto:hittarth91@gmail.com?subject=Re:%20${title}`}
-                    class="ml-2 font-brutalist-medium text-brutalist-orange underline hover:bg-brutalist-orange hover:text-brutalist-bg hover:no-underline px-2 py-1 transition-colors"
+                    href={`mailto:${data.email}?subject=Re:%20${title}`}
+                    class="ml-2 text-brutalist-orange underline underline-offset-4 decoration-brutalist-orange/40 hover:decoration-brutalist-orange transition-colors duration-200 ease-out"
                 >
-                    Click here
+                    say hello →
                 </a>
             </div>
         </footer>

@@ -11,12 +11,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const ogImage = entry.data.image ?? `/og/poems/${entry.slug}.png`;
 ---
-<BaseBlogPost frontmatter={entry.data} title={entry.data.title} description={entry.data.description} date={entry.data.date}>
+<BaseBlogPost frontmatter={entry.data} title={entry.data.title} description={entry.data.description} date={entry.data.date} image={ogImage}>
     {entry.data.tags && entry.data.tags.length > 0 && (
-      <div class="flex flex-wrap gap-2 mb-brutalist-xl">
+      <div class="not-prose flex flex-wrap gap-x-3 gap-y-1 mb-brutalist-xl font-mono text-brutalist-xs">
         {entry.data.tags.map((tag) => (
-          <a href={`/tags/${tag}`} class="font-mono text-brutalist-xs px-2 py-1 border border-brutalist-border text-brutalist-border uppercase tracking-wide hover:border-brutalist-orange hover:text-brutalist-bg hover:bg-brutalist-orange hover:text-brutalist-bg transition-colors no-underline">
+          <a href={`/tags/${tag}`} class="text-brutalist-border hover:text-brutalist-orange transition-colors duration-200 ease-out no-underline">
             #{tag}
           </a>
         ))}

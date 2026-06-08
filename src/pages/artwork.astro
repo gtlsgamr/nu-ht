@@ -1,99 +1,51 @@
 ---
 import { Image } from 'astro:assets';
 import Base from "../layouts/Base.astro";
-import a00100sPORTRAIT_00100_BURST20190214181655816_COVER1 from "../assets/artwork/00100sPORTRAIT_00100_BURST20190214181655816_COVER1.webp"
-import a3p01 from "../assets/artwork/3p01.webp"
-import a3p02 from "../assets/artwork/3p02.webp"
-import a404_2_col from "../assets/artwork/404_2_col.webp"
-import a404_2 from "../assets/artwork/404_2.webp"
-import a404 from "../assets/artwork/404.webp"
-import a808s_PIXEL3 from "../assets/artwork/808s_PIXEL3.webp"
-import abeysaale from "../assets/artwork/abeysaale.webp"
-import amb from "../assets/artwork/amb.webp"
-import amittr from "../assets/artwork/amittr.webp"
-import angelsndemons from "../assets/artwork/angelsndemons.webp"
-import ARTist from "../assets/artwork/ARTist.webp"
-import ARTPROJEcT from "../assets/artwork/ARTPROJEcT.webp"
-import azadi from "../assets/artwork/azadi.webp"
-import baldisbold from "../assets/artwork/baldisbold.webp"
-import butterfliesinstomach from "../assets/artwork/butterfliesinstomach.webp"
-import Caveman from "../assets/artwork/Caveman.webp"
-import chai from "../assets/artwork/chai.webp"
-import charlie from "../assets/artwork/charlie.webp"
-import climate_change_small from "../assets/artwork/climate_change_small.webp"
-import Corona from "../assets/artwork/Corona.webp"
-import crucifyme from "../assets/artwork/crucifyme.webp"
-import detrasdh from "../assets/artwork/detrasdh.webp"
-import Diwana from "../assets/artwork/Diwana.webp"
-import dogincar from "../assets/artwork/dogincar.webp"
-import dontletmefall from "../assets/artwork/dontletmefall.webp"
-import dosti from "../assets/artwork/dosti.webp"
-import duba from "../assets/artwork/duba.webp"
-import escape from "../assets/artwork/escape.webp"
-import Existloudly from "../assets/artwork/Existloudly.webp"
-import FALL from "../assets/artwork/FALL.webp"
-import fightthepower from "../assets/artwork/fightthepower.webp"
-import firebreathingmonk from "../assets/artwork/firebreathingmonk.webp"
-import Ghostinbulb from "../assets/artwork/Ghostinbulb.webp"
-import himesh from "../assets/artwork/himesh.webp"
-import hittarthsamurai from "../assets/artwork/hittarthsamurai.webp"
-import Horseface from "../assets/artwork/Horseface.webp"
-import HTvsTheworld from "../assets/artwork/HTvsTheworld.webp"
-import I_AM_A_GOD from "../assets/artwork/I_AM_A_GOD.webp"
-import jesse from "../assets/artwork/jesse.webp"
-import KEANU from "../assets/artwork/KEANU.webp"
-import littleaccident from "../assets/artwork/littleaccident.webp"
-import makani from "../assets/artwork/makani.webp"
-import makepeace from "../assets/artwork/makepeace.webp"
-import mandomobile from "../assets/artwork/mandomobile.webp"
-import mando from "../assets/artwork/mando.webp"
-import mask from "../assets/artwork/mask.webp"
-import modi from "../assets/artwork/modi.webp"
-import monsterhands from "../assets/artwork/monsterhands.webp"
-import Music from "../assets/artwork/Music.webp"
-import NEWSPAPER from "../assets/artwork/NEWSPAPER.webp"
-import nightm_1 from "../assets/artwork/nightm_1.webp"
-import nightm_3 from "../assets/artwork/nightm_3.webp"
-import nohelp from "../assets/artwork/nohelp.webp"
-import nostalgia from "../assets/artwork/nostalgia.webp"
-import outrun from "../assets/artwork/outrun.webp"
-import PicsArt_07_21_10 from "../assets/artwork/PicsArt_07_21_10.webp"
-import PIXEL_1 from "../assets/artwork/PIXEL_1.webp"
-import Riverofdarknes from "../assets/artwork/Riverofdarknes.webp"
-import Rockmonster from "../assets/artwork/Rockmonster.webp"
-import sentience from "../assets/artwork/sentience.webp"
-import shaktimaan from "../assets/artwork/shaktimaan.webp"
-import shitpost from "../assets/artwork/shitpost.webp"
-import skull2 from "../assets/artwork/skull2.webp"
-import skull from "../assets/artwork/skull.webp"
-import skul from "../assets/artwork/skul.webp"
-import Sky_rainbow from "../assets/artwork/Sky_rainbow.webp"
-import SMD from "../assets/artwork/SMD.webp"
-import Soul_on_fire from "../assets/artwork/Soul_on_fire.webp"
-import spacetrip from "../assets/artwork/spacetrip.webp"
-import srk from "../assets/artwork/srk.webp"
-import Starry_girl from "../assets/artwork/Starry_girl.webp"
-import stoneocean from "../assets/artwork/stoneocean.webp"
-import Surya1 from "../assets/artwork/Surya1.webp"
-import Surya2 from "../assets/artwork/Surya2.webp"
-import tea from "../assets/artwork/tea.webp"
-import TungstenBulbsSmokingBongs from "../assets/artwork/TungstenBulbsSmokingBongs.webp"
-import Untitled_1_2 from "../assets/artwork/Untitled_1_2.webp"
 
+// All artwork is loaded automatically from src/assets/artwork/*.webp
+const modules = import.meta.glob('../assets/artwork/*.webp', { eager: true });
+const art = {};
+for (const path in modules) {
+  const name = path.split('/').pop().replace(/\.webp$/, '');
+  art[name] = modules[path].default;
+}
+
+// TO ADD / REMOVE / REORDER ARTWORK:
+//   1. drop the .webp into src/assets/artwork/
+//   2. add (or move) its filename — without ".webp" — in this list.
+// Anything not listed here simply won't be shown.
+const order = [
+  "HTvsTheworld", "808s_PIXEL3", "skul", "nostalgia", "dogincar", "himesh",
+  "Music", "ARTist", "Horseface", "Surya1", "skull2", "mask", "makepeace",
+  "srk", "3p01", "Starry_girl", "angelsndemons", "PIXEL_1", "404_2_col",
+  "Existloudly", "skull", "Corona", "jesse", "SMD", "Surya2", "mandomobile",
+  "Soul_on_fire", "monsterhands", "fightthepower", "sentience", "Ghostinbulb",
+  "littleaccident", "PicsArt_07_21_10", "ARTPROJEcT", "dosti", "azadi",
+  "NEWSPAPER", "Sky_rainbow", "charlie", "Riverofdarknes",
+  "00100sPORTRAIT_00100_BURST20190214181655816_COVER1", "baldisbold", "amb",
+  "3p02", "TungstenBulbsSmokingBongs", "duba", "amittr", "shitpost", "nightm_3",
+  "climate_change_small", "FALL", "Rockmonster", "stoneocean", "tea",
+  "dontletmefall", "404", "shaktimaan", "Untitled_1_2", "hittarthsamurai",
+  "abeysaale", "butterfliesinstomach", "crucifyme", "KEANU", "nohelp", "404_2",
+  "Diwana", "I_AM_A_GOD", "outrun", "nightm_1", "detrasdh", "modi", "escape",
+  "chai", "makani", "Caveman", "spacetrip", "firebreathingmonk", "mando",
+];
+
+const artworks = order.filter((name) => art[name]);
 ---
-<Base title="Artworks">
+<Base title="Artworks" description="Digital artwork by Hitarth Thummar — vaporwave themes and pop-culture remixes made in Photoshop." image="/og/pages/artwork.png">
   <div class="max-w-7xl mx-auto">
     <!-- Page Header -->
-    <header class="mb-brutalist-2xl border-l-brutalist-thick border-brutalist-orange pl-brutalist-lg">
-      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-brutalist-black uppercase leading-none">
+    <header class="mb-brutalist-xl">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
         Artwork
       </h1>
     </header>
 
     <!-- Introduction -->
-    <section class="mb-brutalist-2xl border-brutalist border-brutalist-text p-brutalist-lg max-w-4xl">
-      <div class="space-y-brutalist-md text-brutalist-base md:text-brutalist-lg">
-        <p class="font-brutalist-bold">
+    <section class="mb-brutalist-2xl max-w-3xl">
+      <div class="space-y-brutalist-sm text-brutalist-base md:text-brutalist-lg leading-relaxed text-brutalist-text/90">
+        <p class="font-display text-brutalist-lg md:text-brutalist-xl text-brutalist-text">
           This is my artwork. Wait patiently for images to load.
         </p>
         <p>
@@ -108,97 +60,24 @@ import Untitled_1_2 from "../assets/artwork/Untitled_1_2.webp"
 
     <!-- Gallery -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-brutalist-md mb-brutalist-2xl">
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={HTvsTheworld} alt="HTvsTheworld" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a808s_PIXEL3} alt="a808s_PIXEL3" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={skul} alt="skul" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={nostalgia} alt="nostalgia" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={dogincar} alt="dogincar" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={himesh} alt="himesh" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Music} alt="Music" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={ARTist} alt="ARTist" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Horseface} alt="Horseface" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Surya1} alt="Surya1" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={skull2} alt="skull2" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={mask} alt="mask" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={makepeace} alt="makepeace" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={srk} alt="srk" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a3p01} alt="a3p01" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Starry_girl} alt="Starry_girl" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={angelsndemons} alt="angelsndemons" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={PIXEL_1} alt="PIXEL_1" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a404_2_col} alt="a404_2_col" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Existloudly} alt="Existloudly" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={skull} alt="skull" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Corona} alt="Corona" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={jesse} alt="jesse" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={SMD} alt="SMD" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Surya2} alt="Surya2" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={mandomobile} alt="mandomobile" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Soul_on_fire} alt="Soul_on_fire" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={monsterhands} alt="monsterhands" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={fightthepower} alt="fightthepower" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={sentience} alt="sentience" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Ghostinbulb} alt="Ghostinbulb" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={littleaccident} alt="littleaccident" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={PicsArt_07_21_10} alt="PicsArt_07_21_10.23.41" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={ARTPROJEcT} alt="ARTPROJEcT" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={dosti} alt="dosti" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={azadi} alt="azadi" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={NEWSPAPER} alt="NEWSPAPER" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Sky_rainbow} alt="Sky_rainbow" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={charlie} alt="charlie" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Riverofdarknes} alt="Riverofdarknes" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a00100sPORTRAIT_00100_BURST20190214181655816_COVER1} alt="a00100sPORTRAIT_00100_BURST20190214181655816_COVER1" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={baldisbold} alt="baldisbold" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={amb} alt="amb" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a3p02} alt="a3p02" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={TungstenBulbsSmokingBongs} alt="TungstenBulbsSmokingBongs" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={duba} alt="duba" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={amittr} alt="amittr" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={shitpost} alt="shitpost" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={nightm_3} alt="nightm_3" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={climate_change_small} alt="climate_change_small" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={FALL} alt="FALL" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Rockmonster} alt="Rockmonster" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={stoneocean} alt="stoneocean" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={tea} alt="tea" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={dontletmefall} alt="dontletmefall" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a404} alt="a404" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={shaktimaan} alt="shaktimaan" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Untitled_1_2} alt="Untitled_1_2" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={hittarthsamurai} alt="hittarthsamurai" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={abeysaale} alt="abeysaale" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={butterfliesinstomach} alt="butterfliesinstomach" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={crucifyme} alt="crucifyme" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={KEANU} alt="KEANU" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={nohelp} alt="nohelp" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={a404_2} alt="a404_2" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Diwana} alt="Diwana" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={I_AM_A_GOD} alt="I_AM_A_GOD" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={outrun} alt="outrun" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={nightm_1} alt="nightm_1" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={detrasdh} alt="detrasdh" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={modi} alt="modi" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={escape} alt="escape" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={chai} alt="chai" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={makani} alt="makani" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={Caveman} alt="Caveman" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={spacetrip} alt="spacetrip" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={firebreathingmonk} alt="firebreathingmonk" quality="low" class="w-full h-full object-cover" /></div>
-      <div class="border-brutalist border-brutalist-text overflow-hidden hover:border-brutalist-orange transition-colors"><Image src={mando} alt="mando" quality="low" class="w-full h-full object-cover" /></div>
+      {artworks.map((name) => (
+        <div class="overflow-hidden border-brutalist border-brutalist-text transition-colors duration-200 ease-out hover:border-brutalist-orange">
+          <Image src={art[name]} alt={name} quality="low" class="w-full h-full object-cover" />
+        </div>
+      ))}
     </div>
 
     <!-- License -->
-    <section class="border-t-brutalist-thick border-brutalist-text pt-brutalist-lg">
-      <div class="max-w-4xl">
-        <h2 class="text-brutalist-xl md:text-brutalist-2xl font-brutalist-black uppercase mb-brutalist-md">
+    <section class="border-t border-brutalist-border/40 pt-brutalist-lg">
+      <div class="max-w-3xl">
+        <h2 class="text-brutalist-xl md:text-brutalist-2xl font-display text-brutalist-text mb-brutalist-sm">
           License
         </h2>
-        <div class="font-mono text-brutalist-sm md:text-brutalist-base space-y-brutalist-xs text-brutalist-border">
+        <div class="font-mono text-brutalist-sm space-y-brutalist-xs text-brutalist-border">
           <p>Artworks © by Hitarth Thummar</p>
           <p>
             The above artworks are licensed under a
-            <a href="http://creativecommons.org/licenses/by-sa/4.0/" class="text-brutalist-orange underline hover:bg-brutalist-orange hover:text-brutalist-bg hover:no-underline px-1 transition-colors">
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/" class="text-brutalist-orange underline underline-offset-4 decoration-brutalist-orange/40 hover:decoration-brutalist-orange transition-colors duration-200 ease-out">
               Creative Commons Attribution-ShareAlike 4.0 International License
             </a>.
           </p>
