@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ade116aa-c2eb-49f3-9ed2-78c6f24c1750" name="Changes" comment="fix: correct formatting in Hindi poem &quot;शिखर की चोट पर&quot;">
+      <change beforePath="$PROJECT_DIR$/src/components/BlogPreview.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogPreview.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Head.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Head.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BaseBlogPost.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BaseBlogPost.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/artwork.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/artwork.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mahabharat/[...slug].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mahabharat/[...slug].astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mahabharat/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mahabharat/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/poems/[...slug].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/poems/[...slug].astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/poems/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/poems/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/[...slug].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[...slug].astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tags/[tag].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tags/[tag].astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.cjs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="527" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gtlsgamr&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:gtlsgamr/nu-ht&quot;,
+    &quot;accountId&quot;: &quot;e11c0735-8681-44af-bc4b-ccac9594c4a0&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2g0S1qp9Cwj6hCxIuExfNXMiT3l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gtlsgamr/Work/nu-ht&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/gtlsgamr/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/content/posts" />
+      <recent name="$PROJECT_DIR$/src/content/mahabharat" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ade116aa-c2eb-49f3-9ed2-78c6f24c1750" name="Changes" comment="" />
+      <created>1714832792759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714832792759</updated>
+      <workItem from="1714832795728" duration="1637000" />
+      <workItem from="1715136232340" duration="98000" />
+      <workItem from="1715136335771" duration="39000" />
+      <workItem from="1715136380958" duration="49000" />
+      <workItem from="1715136436234" duration="228000" />
+      <workItem from="1715136692288" duration="285000" />
+      <workItem from="1715485942990" duration="18000" />
+      <workItem from="1715507549506" duration="867000" />
+      <workItem from="1715514407108" duration="16000" />
+      <workItem from="1715699804055" duration="50000" />
+      <workItem from="1716205450137" duration="19000" />
+      <workItem from="1716205477079" duration="3373000" />
+      <workItem from="1716208958280" duration="799000" />
+      <workItem from="1745412897573" duration="2115000" />
+      <workItem from="1745664296338" duration="18000" />
+      <workItem from="1745855638893" duration="1543000" />
+      <workItem from="1746117815047" duration="598000" />
+      <workItem from="1746253951768" duration="17000" />
+      <workItem from="1753017689609" duration="418000" />
+      <workItem from="1765707101630" duration="126000" />
+      <workItem from="1765707610747" duration="75000" />
+      <workItem from="1765714304348" duration="547000" />
+      <workItem from="1769522409110" duration="1098000" />
+      <workItem from="1774202997084" duration="1421000" />
+    </task>
+    <task id="LOCAL-00001" summary="&quot;Refactored homepage content to better reflect personal identity and past online community involvement&quot;">
+      <option name="closed" value="true" />
+      <created>1714833127337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714833127337</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactor link in index.astro to include full URL for Github and Gitlab connections">
+      <option name="closed" value="true" />
+      <created>1715136966832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715136966832</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactor text alignment in various components and update font loading mechanism.">
+      <option name="closed" value="true" />
+      <created>1715508403052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715508403052</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactored code in BaseBlogPost.astro and added new blog post &quot;Goodbye Copilot, it was fun while it lasted.&quot; in goodbye_copilot.md. Shared my experience and reasons for not using GitHub Copilot anymore.">
+      <option name="closed" value="true" />
+      <created>1716208842439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716208842439</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed atom feed">
+      <option name="closed" value="true" />
+      <created>1745419933633</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745419933633</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add Hindi poem &quot;शिखर की चोट पर&quot; to content library">
+      <option name="closed" value="true" />
+      <created>1765707216583</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765707216583</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: correct formatting in Hindi poem &quot;शिखर की चोट पर&quot;">
+      <option name="closed" value="true" />
+      <created>1765707670106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765707670106</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Refactored homepage content to better reflect personal identity and past online community involvement&quot;" />
+    <MESSAGE value="Refactor link in index.astro to include full URL for Github and Gitlab connections" />
+    <MESSAGE value="Refactor text alignment in various components and update font loading mechanism." />
+    <MESSAGE value="Refactored code in BaseBlogPost.astro and added new blog post &quot;Goodbye Copilot, it was fun while it lasted.&quot; in goodbye_copilot.md. Shared my experience and reasons for not using GitHub Copilot anymore." />
+    <MESSAGE value="Invalid configuration: openAiApiKey cannot be null or empty. API keys can be generated here: https://platform.openai.com/account/api-keys." />
+    <MESSAGE value="fixed atom feed" />
+    <MESSAGE value="feat: add Hindi poem &quot;शिखर की चोट पर&quot; to content library" />
+    <MESSAGE value="fix: correct formatting in Hindi poem &quot;शिखर की चोट पर&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: correct formatting in Hindi poem &quot;शिखर की चोट पर&quot;" />
+  </component>
+</project>

@@ -32,7 +32,7 @@ export async function GET(context) {
     return `
       <entry>
         <title>${post.data.title}</title>
-        <id>https://hitarththummar.xyz/${post.collection}/${post.slug}</id>
+        <id>https://hitarththummar.com/${post.collection}/${post.slug}</id>
         <updated>${convertToRFC3339(post.data.date)}</updated>
         <summary>"${post.data.description}"</summary>
         <content type="html">${sanitizeHtml(parser.render(post.body))}</content>
@@ -43,10 +43,10 @@ export async function GET(context) {
   const body = `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ht.xyz</title>
-<id>https://hitarththummar.xyz/feed.xml</id>
+<id>https://hitarththummar.com/feed.xml</id>
 <subtitle>Hitarth Thummar's website and blog</subtitle>
-<link href="https://hitarththummar.xyz"/>
-<link href="https://hitarththummar.xyz/atom.xml" rel="self"/>
+<link href="https://hitarththummar.com"/>
+<link href="https://hitarththummar.com/atom.xml" rel="self"/>
 <updated>${convertToRFC3339(sortedPosts[0].data.date)}</updated>
 <author>
 <name>Hitarth Thummar</name>

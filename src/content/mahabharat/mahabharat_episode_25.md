@@ -32,7 +32,7 @@ weapon, the Sudarshan Chakra.
 
 - In the final talk with Ashwatthama, Guru Drona explains why he did what he
   did to
-  [Eklavya](https://hitarththummar.xyz/mahabharat/mahabharat_episode_23.html).
+  [Eklavya](https://hitarththummar.com/mahabharat/mahabharat_episode_23.html).
   It was not because of caste or royal blood, but simply for the fact that
   eklavya "stole" the education instead of getting it by legitimate means.
   *Although I think it could have been due to eklavya being a potential*

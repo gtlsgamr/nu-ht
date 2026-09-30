@@ -75,7 +75,7 @@ function wrap(text: string, fontSize: number, maxWidth: number, maxLines: number
 }
 
 function fmtDate(date?: string) {
-  if (!date) return "hitarththummar.xyz";
+  if (!date) return "hitarththummar.com";
   const d = new Date(date);
   if (isNaN(d.getTime())) return date;
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
