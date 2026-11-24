@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import data from "../../../data.js";
+
+const link = "text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out";
+const h2 = "text-brutalist-xl font-display text-brutalist-text mt-brutalist-md mb-brutalist-sm";
+---
+
+<Base
+  title="Spintone Support"
+  description="Help with Spintone, a music player for iPhone that you steer with a wheel."
+>
+  <article class="max-w-2xl">
+    <header class="mb-brutalist-lg">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
+        Spintone Support
+      </h1>
+    </header>
+
+    <div class="space-y-brutalist-sm text-brutalist-base md:text-brutalist-lg leading-relaxed text-brutalist-text">
+      <p>
+        Need help? Email <a href={`mailto:${data.email}`} class={`${link} break-all`}>{data.email}</a>.
+      </p>
+
+      <h2 class={h2}>How do I add music?</h2>
+      <p>Open Settings › Music › Wi‑Fi Transfer and follow the address on screen from a computer on the same Wi‑Fi. Or copy files to Spintone in the Files app, or with Finder on a Mac.</p>
+
+      <h2 class={h2}>Why can't I see my lyrics or cover?</h2>
+      <p>Spintone shows what's in your files. Add lyrics as tags or as an .lrc file with the same name as the song. Add covers as embedded art, or as cover.jpg in the album's folder.</p>
+
+      <h2 class={h2}>How do I move to a new iPhone?</h2>
+      <p>Open Settings › Music › Backup, choose Save Backup and keep the file somewhere outside Spintone, such as iCloud Drive. It holds your play counts, ratings, playlists and settings, not the music itself. On the new iPhone, copy your music across first, then choose Restore on the same screen, pick the file, and open Spintone again when it asks.</p>
+
+      <h2 class={h2}>I bought Spintone Pro. How do I get it back?</h2>
+      <p>Open Settings › Spintone Pro and choose Restore, signed in with the same Apple Account you bought it with.</p>
+
+      <h2 class={h2}>How do I connect Last.fm?</h2>
+      <p>Create a free API key on Last.fm, then enter it in Settings › Last.fm and sign in.</p>
+
+      <h2 class={h2}>Privacy</h2>
+      <p><a href="/spintone/privacy/" class={link}>Read the privacy policy.</a></p>
+    </div>
+  </article>
+</Base>

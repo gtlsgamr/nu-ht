@@ -1,0 +1,54 @@
+---
+import Base from "../../layouts/Base.astro";
+import data from "../../../data.js";
+
+const link = "text-brutalist-orange underline underline-offset-2 hover:text-brutalist-text transition-colors duration-200 ease-out";
+const h2 = "text-brutalist-xl font-display text-brutalist-text mt-brutalist-md mb-brutalist-sm";
+---
+
+<Base
+  title="Spintone Privacy Policy"
+  description="How Spintone, a music player for iPhone, handles your data. It doesn't collect any."
+>
+  <article class="max-w-2xl">
+    <header class="mb-brutalist-lg">
+      <h1 class="text-brutalist-4xl md:text-brutalist-5xl font-display font-medium leading-tight text-brutalist-text">
+        Spintone Privacy Policy
+      </h1>
+      <p class="mt-2 font-mono text-brutalist-sm text-brutalist-text">Last updated: 25 November 2026</p>
+    </header>
+
+    <div class="space-y-brutalist-sm text-brutalist-base md:text-brutalist-lg leading-relaxed text-brutalist-text">
+      <p>
+        Spintone is a music player. Your music, playlists, ratings and listening history stay on your
+        iPhone. We don't run a server, and we don't collect, store or see any of your data. There are
+        no accounts, ads, analytics or tracking.
+      </p>
+
+      <h2 class={h2}>Services you choose to use</h2>
+      <p>The app only contacts other services when you use them:</p>
+      <ul class="list-[square] pl-5 space-y-1">
+        <li><strong>Podcasts:</strong> your iPhone downloads the feeds and episodes you subscribe to from their publishers. If you search for a show, your search goes to Apple's public podcast directory.</li>
+        <li><strong>Last.fm:</strong> if you connect your account, the songs you play are sent to Last.fm using your own API key.</li>
+        <li><strong>Apple Music:</strong> if you sign in, the app reads your Apple Music library through Apple's MusicKit.</li>
+        <li><strong>Spintone Pro:</strong> the purchase goes through Apple. The app learns whether Pro is unlocked. It never sees your payment details.</li>
+      </ul>
+      <p>These services handle your data under their own privacy policies. We can't access what you send them.</p>
+
+      <h2 class={h2}>Wi‑Fi Transfer</h2>
+      <p>Wi‑Fi Transfer stays on your local network. It runs only while its screen is open and needs a code shown on your iPhone.</p>
+
+      <h2 class={h2}>Backups</h2>
+      <p>A backup is a file the app saves where you choose in the Files app. It never leaves your control unless you move or share it.</p>
+
+      <h2 class={h2}>Deleting your data</h2>
+      <p>Everything the app stores is on your iPhone. Deleting the app deletes it. Last.fm keys are kept in your iPhone's Keychain and can be changed in the app.</p>
+
+      <h2 class={h2}>Children</h2>
+      <p>The app doesn't collect data from anyone, including children.</p>
+
+      <h2 class={h2}>Contact</h2>
+      <p>Questions: <a href={`mailto:${data.email}`} class={`${link} break-all`}>{data.email}</a></p>
+    </div>
+  </article>
+</Base>
